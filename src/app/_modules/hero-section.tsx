@@ -1,3 +1,5 @@
+import ContainerScreen from "../components/container-screen";
+
 interface HeroSectionProps {
   title: string;
   subTitle: string;
@@ -5,25 +7,22 @@ interface HeroSectionProps {
 
 export default function HeroSection({ title, subTitle }: HeroSectionProps) {
   return (
-    <div className="container m-auto flex flex-row items-center justify-center gap-12 px-4 py-16">
-      <div className="z-10 container flex flex-col gap-6 md:gap-12">
+    <ContainerScreen className="flex flex-col-reverse md:flex-row items-center justify-center gap-12 px-4 py-16 border border-red-500">
+      <div className="flex flex-col gap-6 md:gap-12">
         <h1
-          className="text-8xl leading-[80%] tracking-tighter text-white md:text-9xl"
-          style={{ wordSpacing: "100%" }}
+          className="hidden w-1/3 text-8xl leading-[80%] tracking-tighter md:flex md:text-9xl"
+          // style={{ wordSpacing: "200%" }}
         >
           {title}
         </h1>
         <p
-          className="text-2xl font-extrabold tracking-wide wrap-break-word text-white uppercase md:text-4xl"
-          style={{ wordSpacing: '2000%' }}
+          className="text-2xl font-extrabold tracking-wide wrap-break-word uppercase md:text-4xl"
         >
           {subTitle}
         </p>
       </div>
 
-      <div className="absolute z-0 container flex flex-col items-center justify-center md:relative">
-        aadasda
-      </div>
-    </div>
+      <div className="w-full">aadasda</div>
+    </ContainerScreen>
   );
 }

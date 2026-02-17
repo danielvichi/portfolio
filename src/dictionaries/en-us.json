@@ -2,5 +2,34 @@
   "hero": {
     "title": "Daniel Ishigaki",
     "sub_title": "Full-stack Developer"
+  },
+  "about": {
+    "title": "About me",
+    "content": "Its a me Daniel Ishigaki"
+  },
+  "last_exp": {
+    "title": "KLKTN LTDA / SanFran Tokyo ",
+    "content": "General description of journey",
+    "sub_title": "Projects Highlight",
+    "projects": [
+      {
+        "title": "Weebox",
+        "content": "about project"
+      },
+      {
+        "title": "SFT Studios",
+        "content": "about project"
+      },
+      {
+        "title": "Anime ID",
+        "content": "about project"
+      }
+    ],
+    "tech_stack": [
+      "Next.js"
+    ]
+  },
+  "other_exp": {
+    "title": ""
   }
 }
