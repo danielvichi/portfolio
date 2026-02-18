@@ -5,9 +5,9 @@ import HeroSection from "../_modules/hero-section";
 import OthersExperienceRoleSection from "../_modules/personal-project-section.tsx";
 import PersonalProjectSection from "../_modules/personal-project-section.tsx";
 import LastExperienceRoleSection from "../_modules/personal-project-section.tsx";
-import Footer from "../components/footer";
-import Header from "../components/header";
-import PageBackground from "../components/page-background";
+import Footer from "../_components/footer";
+import Header from "../_components/header";
+import PageBackground from "../_components/page-background";
 import { getDictionary, hasLocale } from "./dictionaries";
 import { notFound } from "next/navigation";
 
@@ -19,7 +19,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
   const dict = await getDictionary(lang);
 
   return (
-    <main className="relative min-h-full text-white">
+    <main className="text-txt-primary relative min-h-full">
       <PageBackground />
       <Header />
       <HeroSection title={dict.hero.title} subTitle={dict.hero.sub_title} />
