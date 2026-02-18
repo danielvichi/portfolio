@@ -7,7 +7,7 @@ const PageBackground = forwardRef<
   const { children, className, ...rest } = props;
   return (
     <div
-      className={`absolute inset-0 bg-gray-800 ${className}`}
+      className={`absolute inset-0 bg-background-primary ${className}`}
       ref={ref}
       {...rest}
     >

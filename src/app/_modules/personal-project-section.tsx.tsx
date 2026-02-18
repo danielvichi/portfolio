@@ -1,11 +1,11 @@
-import ContainerScreen from "../components/container-screen";
+import ContainerScreen from "../_components/container-screen";
 
 interface PersonalProjectSectionProps {
   title: string;
   // content: string;
 }
 
-export default function PersonalProjectSection({
+export default function FormationSectionPersonalProjectSection({
   title,
   // content,
 }: PersonalProjectSectionProps) {

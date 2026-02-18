@@ -1,4 +1,4 @@
-import ContainerScreen from "../components/container-screen";
+import ContainerScreen from "../_components/container-screen";
 
 interface FormationSectionProps {
   title: string;
