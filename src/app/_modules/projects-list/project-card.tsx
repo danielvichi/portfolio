@@ -18,12 +18,12 @@ export default function ProjectCard(props: ProjectCardProps) {
   );
 }
 
-function ProjectCardThumbNail(props: ProjectCardProps) {
+function ProjectCardThumbnail(props: ProjectCardProps) {
   const { title, coverImageUrl } = props;
   return (
-    <div className="relative h-[150px] w-[400px] border border-gray-500 p-4">
+    <div className="group relative hover:border-accent-primary h-[150px] w-[400px] border border-gray-500 p-4 overflow-hidden transition-all">
       <div
-        className="absolute inset-[2px] brightness-50"
+        className="absolute inset-[2px] brightness-50 group-hover:scale-110 transition-all"
         style={{
           backgroundImage: `url(${coverImageUrl})`,
           backgroundSize: "cover",
@@ -36,4 +36,4 @@ function ProjectCardThumbNail(props: ProjectCardProps) {
   );
 }
 
-ProjectCard.thumbnail = ProjectCardThumbNail;
+ProjectCard.thumbnail = ProjectCardThumbnail;

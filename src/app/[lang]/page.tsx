@@ -9,7 +9,7 @@ import Header from "../_components/header";
 import PageBackground from "../_components/page-background";
 import { getDictionary, hasLocale } from "./dictionaries";
 import { notFound } from "next/navigation";
-import EndorserSection from "../_modules/page-sections/endorser-section/endorser-section";
+import RecommendationSection from "../_modules/page-sections/recommendation-section/recommendation-section";
 import LastExperienceRoleSection from "../_modules/page-sections/last-experience-role-section";
 import ModalProvider from "../_contexts/modal-context";
 
@@ -28,7 +28,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
           <Header content={dict.header} />
           <HeroSection title={dict.hero.title} subTitle={dict.hero.sub_title} />
           <AboutSection title={dict.about.title} content={dict.about.content} />
-          <EndorserSection
+          <RecommendationSection
             title={dict.endorser.title}
             content={dict.endorser.content}
           />

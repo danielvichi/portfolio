@@ -7,7 +7,7 @@ const ContainerScreen = forwardRef<
   const { children, className, ...rest } = props;
   return (
     <div
-      className={`relative container mx-auto min-h-screen ${className}`}
+      className={`relative container mx-auto  ${className}`}
       ref={ref}
       {...rest}
     >

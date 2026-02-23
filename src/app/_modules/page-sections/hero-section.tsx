@@ -10,7 +10,7 @@ interface HeroSectionProps {
 
 export default function HeroSection({ title, subTitle }: HeroSectionProps) {
   return (
-    <ContainerScreen className="flex flex-col-reverse items-center justify-center gap-12 px-4 py-16 md:flex-row">
+    <ContainerScreen className="flex flex-col-reverse min-h-screen items-center justify-center gap-12 px-4 py-16 md:flex-row">
       <div className="flex flex-col gap-3 md:gap-6">
         <h1 className="flex flex-col text-4xl tracking-tighter text-white md:text-7xl lg:text-8xl">
           <Markdown>{title}</Markdown>
