@@ -9,7 +9,7 @@ import Header from "../_components/header";
 import PageBackground from "../_components/page-background";
 import { getDictionary, hasLocale } from "./dictionaries";
 import { notFound } from "next/navigation";
-import EndorserSection from "../_modules/page-sections/endorser-section";
+import EndorserSection from "../_modules/page-sections/endorser-section/endorser-section";
 import LastExperienceRoleSection from "../_modules/page-sections/last-experience-role-section";
 import ModalProvider from "../_contexts/modal-context";
 

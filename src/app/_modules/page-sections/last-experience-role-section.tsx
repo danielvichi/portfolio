@@ -3,8 +3,8 @@ import ContainerScreen from "../../_components/container-screen";
 import SectionTitle from "../../_components/section-title";
 import type { TechStack } from "../tech-stack-tags";
 import TechStackTags from "../tech-stack-tags";
-import type { ProjectCardProps } from "../../_components/project-card";
-import ProjectCardList from "../project-card-list";
+import type { ProjectCardProps } from "../projects-list/project-card";
+import ProjectCardList from "../projects-list/project-card-list";
 
 interface LastExperienceRoleSectionProps {
   title: string;

@@ -1,9 +1,9 @@
-import ContainerScreen from "../../_components/container-screen";
-import SectionTitle from "../../_components/section-title";
-import ExternalLink from "../../_components/external-link";
+import ContainerScreen from "../../../_components/container-screen";
+import SectionTitle from "../../../_components/section-title";
+import ExternalLink from "../../../_components/external-link";
 import Markdown from "react-markdown";
 import { HeartIcon } from "@radix-ui/react-icons";
-import QuoteIcon from "../../_icons/quote-icon";
+import QuoteIcon from "../../../_icons/quote-icon";
 
 interface EndorserContent {
   name: string;
