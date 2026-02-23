@@ -1,6 +1,6 @@
-import ContainerScreen from "../_components/container-screen";
-import SectionTitle from "../_components/section-title";
-import ExternalLink from "../_components/external-link";
+import ContainerScreen from "../../_components/container-screen";
+import SectionTitle from "../../_components/section-title";
+import ExternalLink from "../../_components/external-link";
 import Markdown from "react-markdown";
 import { FaceIcon } from "@radix-ui/react-icons";
 

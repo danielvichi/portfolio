@@ -1,16 +1,16 @@
-import AboutSection from "../_modules/about-section";
-import ContactSection from "../_modules/contact-section";
-import FormationSection from "../_modules/formation-section";
-import HeroSection from "../_modules/hero-section";
-import OthersExperienceRoleSection from "../_modules/personal-project-section.tsx";
-import PersonalProjectSection from "../_modules/personal-project-section.tsx";
+import AboutSection from "../_modules/page-sections/about-section";
+import ContactSection from "../_modules/page-sections/contact-section";
+import FormationSection from "../_modules/page-sections/formation-section";
+import HeroSection from "../_modules/page-sections/hero-section";
+import OthersExperienceRoleSection from "../_modules/page-sections/personal-project-section.tsx";
+import PersonalProjectSection from "../_modules/page-sections/personal-project-section.tsx";
 import Footer from "../_components/footer";
 import Header from "../_components/header";
 import PageBackground from "../_components/page-background";
 import { getDictionary, hasLocale } from "./dictionaries";
 import { notFound } from "next/navigation";
-import EndorserSection from "../_modules/endorser-section";
-import LastExperienceRoleSection from "../_modules/last-experience-role-section";
+import EndorserSection from "../_modules/page-sections/endorser-section";
+import LastExperienceRoleSection from "../_modules/page-sections/last-experience-role-section";
 import ModalProvider from "../_contexts/modal-context";
 
 export default async function HomePage({ params }: PageProps<"/[lang]">) {

@@ -10,16 +10,16 @@ export interface ProjectCardProps {
 export default function ProjectCard(props: ProjectCardProps) {
   const { title, description, coverImageUrl, projectUrl } = props;
   return (
-    <div className="relative flex flex-col gap-4 max-h-[70vh] w-full min-w-[300px] overflow-y-scroll border border-gray-500 p-4">
+    <div className="relative flex max-h-[70vh] w-full min-w-[300px] flex-col gap-4 overflow-y-scroll border border-gray-500 p-4">
       <h5 className="bg-accent-tertiary relative w-fit px-2 py-0.5">{title}</h5>
       <Markdown>{description}</Markdown>
-      <img src={coverImageUrl} />
+      <img src={coverImageUrl} alt={`${title} project sample image`} />
     </div>
   );
 }
 
 function ProjectCardThumbNail(props: ProjectCardProps) {
-  const { title, description, coverImageUrl, projectUrl } = props;
+  const { title, coverImageUrl } = props;
   return (
     <div className="relative h-[150px] w-[400px] border border-gray-500 p-4">
       <div

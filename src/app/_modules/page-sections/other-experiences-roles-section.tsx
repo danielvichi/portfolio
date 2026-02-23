@@ -1,5 +1,5 @@
-import ContainerScreen from "../_components/container-screen";
-import SectionTitle from "../_components/section-title";
+import ContainerScreen from "../../_components/container-screen";
+import SectionTitle from "../../_components/section-title";
 
 interface OtherExperienceContent {
   companyName: string;

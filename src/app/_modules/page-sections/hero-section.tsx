@@ -1,7 +1,7 @@
 import Markdown from "react-markdown";
-import ContainerScreen from "../_components/container-screen";
+import ContainerScreen from "../../_components/container-screen";
 import { ChevronRightIcon } from "@radix-ui/react-icons";
-import ChevronRight from "../_icons/chevron-right";
+import ChevronRight from "../../_icons/chevron-right";
 
 interface HeroSectionProps {
   title: string;
