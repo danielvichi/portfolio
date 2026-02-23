@@ -65,7 +65,7 @@ export default function Modal(props: ModalProps) {
         className={`absolute inset-0 bg-black opacity-70`}
         onClick={handleClickClose}
       />
-      <div className="relative">
+      <div className="relative min-w-[300px] max-w-[1024px] m-4 md:mx-16">
         <CloseButton onClick={handleClickClose} />
         {isOpen ? children : <></>}
       </div>
