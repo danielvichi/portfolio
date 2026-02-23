@@ -1,4 +1,5 @@
 import ContainerScreen from "../_components/container-screen";
+import SectionTitle from "../_components/section-title";
 
 interface OtherExperienceContent {
   companyName: string;
@@ -16,8 +17,8 @@ export default function OthersExperienceRoleSection({
   // content,
 }: OthersExperienceRoleSectionProps) {
   return (
-    <ContainerScreen className="border border-red-600 px-4 py-24">
-      <h2>{title}</h2>
+    <ContainerScreen className="px-4 py-24">
+      <SectionTitle>{title}</SectionTitle>
       <h3>Softcenter </h3>
       <p> About exp</p>
       <h3>Flockin</h3>

@@ -1,32 +1,93 @@
+import Markdown from "react-markdown";
 import ContainerScreen from "../_components/container-screen";
-
-interface LastExperienceRoleSectionProjects {
-  title: string;
-  content: string;
-}
+import SectionTitle from "../_components/section-title";
+import type { TechStack } from "./tech-stack-tags";
+import TechStackTags from "./tech-stack-tags";
+import type { ProjectCardProps } from "../_components/project-card";
+import ProjectCardList from "./project-card-list";
 
 interface LastExperienceRoleSectionProps {
   title: string;
-  content: string;
   subTitle: string;
-  // projects: LastExperienceRoleSectionProjects[];
-  techStack?: string[];
+  description: string;
+  projectsTitle: string;
+  projects: ProjectCardProps[];
+  techStackTitle: string;
+  techStack?: TechStack;
+}
+
+interface DescriptionSectionProps {
+  title: string;
+  description: string;
+}
+
+function DescriptionSection({ title, description }: DescriptionSectionProps) {
+  return (
+    <div className="flex flex-col gap-1">
+      <h3>{title}</h3>
+      <Markdown>{description}</Markdown>
+    </div>
+  );
+}
+
+interface ProjectsSectionProps {
+  title: string;
+  projectsList: ProjectCardProps[];
+}
+
+function ProjectsSection({ title, projectsList }: ProjectsSectionProps) {
+  return (
+    <>
+      <div className="relative container mx-auto">
+        <h4>{title}</h4>
+      </div>
+      <ProjectCardList projectList={projectsList} />
+    </>
+  );
+}
+
+interface TechStackSectionProps {
+  title: string;
+  techStack: TechStack;
+}
+
+function TechStackSection({ title, techStack }: TechStackSectionProps) {
+  return (
+    <>
+      <h4>{title}</h4>
+      <TechStackTags techStack={techStack} />
+    </>
+  );
 }
 
 export default function LastExperienceRoleSection(
   props: LastExperienceRoleSectionProps,
 ) {
-  const { title, content, subTitle} = props;
+  const {
+    title,
+    subTitle,
+    description,
+    projectsTitle,
+    projects,
+    techStackTitle,
+    techStack,
+  } = props;
   return (
-    <ContainerScreen className="border border-red-600 px-4 py-24">
-      <h2>{title}</h2>
-      <p>{content}</p>
-      <h3>KLKTN / SanFran Tokyo</h3>
-      <p> About company</p>
-      <h4>{subTitle}</h4>
-      <h5>Weebox</h5>
-      <h5>SFT studios</h5>
-      {}
-    </ContainerScreen>
+    <div className="flex flex-col gap-8">
+      <ContainerScreen className="flex min-h-0! flex-col gap-8 px-4 pt-24">
+        <SectionTitle>{title}</SectionTitle>
+        <DescriptionSection title={subTitle} description={description} />
+      </ContainerScreen>
+
+      <ProjectsSection title={projectsTitle} projectsList={projects} />
+
+      <ContainerScreen className="flex min-h-0! flex-col gap-8 px-4 pb-24">
+        {techStack ? (
+          <TechStackSection title={techStackTitle} techStack={techStack} />
+        ) : (
+          ""
+        )}
+      </ContainerScreen>
+    </div>
   );
 }

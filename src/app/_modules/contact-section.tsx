@@ -1,4 +1,5 @@
 import ContainerScreen from "../_components/container-screen";
+import SectionTitle from "../_components/section-title";
 
 interface ContactSectionProps {
   title: string;
@@ -10,8 +11,8 @@ export default function ContactSection({
   // content,
 }: ContactSectionProps) {
   return (
-    <ContainerScreen className="border border-red-600 px-4 py-24">
-      <h2>{title}</h2>
+    <ContainerScreen className="px-4 py-24">
+      <SectionTitle>{title}</SectionTitle>
     </ContainerScreen>
   );
 }

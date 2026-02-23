@@ -1,17 +1,18 @@
 import ContainerScreen from "../_components/container-screen";
+import SectionTitle from "../_components/section-title";
 
 interface PersonalProjectSectionProps {
   title: string;
   // content: string;
 }
 
-export default function FormationSectionPersonalProjectSection({
+export default function PersonalProjectSection({
   title,
   // content,
 }: PersonalProjectSectionProps) {
   return (
-    <ContainerScreen className="border border-red-600 px-4 py-24">
-      <h2>{title}</h2>
+    <ContainerScreen className="px-4 py-24">
+      <SectionTitle>{title}</SectionTitle>
       <p>About project</p>
       <h3> Front-end </h3>
       <a href="https://github.com/danielvichi/espera-queue-fe">

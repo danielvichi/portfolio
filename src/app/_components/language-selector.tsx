@@ -38,16 +38,20 @@ export default function LanguageSelector() {
 
   return (
     <button
-      className="relative flex w-fit flex-row border border-white text-white"
+      className="group relative flex h-full w-fit flex-row border-x border-x-gray-500 text-white hover:cursor-pointer"
       onClick={handleClick}
     >
-      <div className="absolute inset-0.5">
+      <div className="absolute inset-[1px]">
         <div
-          className={`absolute top-0 bottom-0 w-1/2 bg-teal-600 transition-all ${isEn ? "translate-0" : "translate-x-full"}`}
+          className={`bg-accent-tertiary absolute top-0 bottom-0 w-1/2 transition-all group-hover:brightness-150 ${isEn ? "translate-0" : "translate-x-full"}`}
         />
       </div>
-      <div className={`relative px-2`}>{SUPPORTED_LANGUAGES[0]}</div>
-      <div className={`relative px-2`}>{SUPPORTED_LANGUAGES[1]}</div>
+      <div className={`relative px-3 py-1 uppercase`}>
+        {SUPPORTED_LANGUAGES[0]}
+      </div>
+      <div className={`relative px-3 py-1 uppercase`}>
+        {SUPPORTED_LANGUAGES[1]}
+      </div>
     </button>
   );
 }

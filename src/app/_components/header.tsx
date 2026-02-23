@@ -1,13 +1,52 @@
 "use client";
-
+import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import LanguageSelector from "./language-selector";
+import * as Tooltip from "@radix-ui/react-tooltip";
 
-export default function Header() {
+interface HeaderProps {
+  content: Record<string, string>;
+}
+
+function GitHubExternalLinkWithToolTip({
+  tooltipString,
+}: {
+  tooltipString: string;
+}) {
   return (
-    <div className="fixed top-0 right-0 left-0 border-b border-gray-500 px-4 py-2 z-40">
-      <div className="container m-auto flex flex-row justify-between">
+    <div className="group">
+      <Tooltip.Provider>
+        <Tooltip.Root>
+          <Tooltip.Trigger asChild>
+            <a href="https://github.com/danielvichi/portfolio" target="_blank">
+              <GitHubLogoIcon className="text-accent-secondary h-[20px] w-[20px] transition-all group-hover:brightness-150" />
+            </a>
+          </Tooltip.Trigger>
+          <Tooltip.Portal>
+            <Tooltip.Content
+              className="data-[state=delayed-open]:data-[side=bottom]:animate-slideUpAndFade data-[state=delayed-open]:data-[side=left]:animate-slideRightAndFade data-[state=delayed-open]:data-[side=right]:animate-slideLeftAndFade data-[state=delayed-open]:data-[side=top]:animate-slideDownAndFade z-50 rounded bg-white px-2 py-1.5 text-xs leading-none shadow-[hsl(206_22%_7%_/_35%)_0px_10px_38px_-10px,_hsl(206_22%_7%_/_20%)_0px_10px_20px_-15px] will-change-[transform,opacity] select-none"
+              sideOffset={5}
+            >
+              {tooltipString}
+            </Tooltip.Content>
+          </Tooltip.Portal>
+        </Tooltip.Root>
+      </Tooltip.Provider>
+    </div>
+  );
+}
+
+export default function Header(props: HeaderProps) {
+  const { content } = props;
+  return (
+    <div className="bg-background-primary fixed top-0 right-0 left-0 z-40 border-b border-gray-500 px-4">
+      <div className="relative container m-auto flex flex-row items-center justify-between">
         <h1 className="text-accent-primary"> Daniel Ishigaki</h1>
-        <LanguageSelector />
+        <div className="flex flex-row items-center gap-4">
+          <GitHubExternalLinkWithToolTip
+            tooltipString={content.github_tooltip ?? ""}
+          />
+          <LanguageSelector />
+        </div>
       </div>
     </div>
   );

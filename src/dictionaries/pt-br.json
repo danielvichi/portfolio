@@ -1,40 +1,113 @@
 {
+  "header": {
+    "github_tooltip": "Github do projeto"
+  },
   "hero": {
-    "title": "Daniel Ishigaki",
-    "sub_title": "Desenvolvedor Full-stack"
+    "title": "Daniel \n\n Ishigaki",
+    "sub_title": "Desenvolvedor \n\n Full-stack"
   },
   "about": {
-    "title": "Quem sou",
-    "content": "Its a me Daniel Ishigaki"
+    "title": "Oi!",
+    "content": "Sou um desenvolvedor front-end especializado em JavaScript/TypeScript, com ampla experiência em React.js e Next.js. Construo interfaces dinâmicas e responsivas com forte foco em desempenho e experiência do usuário. Sou uma pessoa proativa, em constante aprendizado, apaixonada por transformar ideias em soluções reais. Me sinto à vontade em ambientes colaborativos e contribuo de forma consistente por meio do trabalho em equipe, senso de responsabilidade e resolução de problemas. \n\n Minha formação em design me proporciona um olhar apurado para implementação pixel-perfect e um entendimento profundo dos princípios de UI/UX. Sou especialista em traduzir visões de design em experiências digitais envolventes e acessíveis, aplicando desenvolvimento mobile-first, boas práticas de SEO e padrões de acessibilidade desde o início.\n\n Minha experiência também se estende ao back-end, onde projeto e mantenho soluções escaláveis usando Nest.js, Prisma ORM e PostgreSQL. Também tenho experiência no ecossistema Web3, com conhecimento prático em interação com smart contracts usando WAGMI e consulta de dados on-chain via Alchemy. \n\n Meu principal foco é entregar soluções tecnológicas de ponta a ponta que priorizam eficiência, inovação e uma jornada do usuário perfeita — do banco de dados à interface."
+  },
+  "endorser": {
+    "title": "Recomendações",
+    "content": [
+      {
+        "name": "Ervin Mamutov",
+        "role": "Engenheiro de Software Senior, co-worker em KLKTN",
+        "comment": "Daniel is one of the most talented and dedicated people I’ve ever worked with. Watching him grow from a graphic designer into a highly skilled engineer in just three years was incredible. It really shows his discipline, hard work, and natural talent. \n\n What truly sets Daniel apart is his approach to teamwork. He’s always the first to step up, no matter the task, and consistently delivers thoughtful, precise, and well-rounded solutions. He has a great sense for making sure his work is both user-friendly and robust. Beyond that, he brings so much positivity and energy to the team—it’s impossible to overstate how much better he makes the work environment. \n\n Any team would be lucky to have Daniel. He’s not just talented; he’s the kind of teammate who makes everyone around him better."
+      },
+      {
+        "name": "Fabien Allanic",
+        "role": "Engineering Líder - CTO em KLKTN",
+        "comment": "I had the pleasure to manage Daniel for a few years at KLKTN. \n\n Daniel is not only talented and good at what he does, but he also embodies what I love to see in each engineer: being proactive with things, lead by example, willing to learn and grow, and is always up for a challenge. \n\n He has delivered excellent work, and rose up to the occasion on many circumstances to fill any gap we had, and deliver high quality code while meeting our deadlines. \n\n He is great to collaborate with, a fast learner, and was greatly appreciated by all of his teammates. \n\n I highly recommend Daniel!"
+      }
+    ]
   },
   "last_exp": {
-    "title": "KLKTN LTDA / SanFran Tokyo ",
-    "content": "Descrição geral da jornada",
-    "sub_title": "Principais Projetos",
+    "title": "Ultimas Experiências",
+    "sub_title": "KLKTN LTDA / SanFran Tokyo",
+    "description": "Descrição da jornada",
+    "projects_title": "Projetos Relevantes",
     "projects": [
       {
         "title": "Weebox",
-        "content": "about project"
+        "description": "A Anime / Manga hight interactive NFT store with a storytelling. I worked in a Gacha like machine feature Front-end and also all pages animations and structures",
+        "coverImageUrl": "https://picsum.photos/600/400"
       },
       {
         "title": "SFT Studios",
-        "content": "about project"
+        "description": "about SFT Studios project",
+        "coverImageUrl": "https://picsum.photos/600/400"
       },
       {
         "title": "Anime ID",
-        "content": "about project"
+        "description": "about Anime ID project",
+        "coverImageUrl": "https://picsum.photos/600/400"
+      },
+      {
+        "title": "Maru Project",
+        "description": "about MAru project",
+        "coverImageUrl": "https://picsum.photos/600/400"
+      },
+      {
+        "title": "KLKTN",
+        "description": "about KLKTN.com project",
+        "coverImageUrl": "https://picsum.photos/600/400"
       }
     ],
-    "tech_stack": [
-      "Next.js"
-    ]
+    "tech_stack_title": "Tecnologias e ferramentas utilizadas",
+    "tech_stack": {
+      "front-end": [
+        "React.Js",
+        "Next.js",
+        "Typescript",
+        "Axios",
+        "ZuStand",
+        "Tailwind",
+        "BaseWeb",
+        "Radix",
+        "Styled Components",
+        "Chad CN",
+        "React Spring",
+        "StoryBook",
+        "React Three Fiber (3D)",
+        "Sentry",
+        "Google Tag Manager",
+        "CSP (Content Security Policy)"
+      ],
+      "back-end": [
+        "Node.js",
+        "Prisma ORM",
+        "Nest.Js",
+        "REST API"
+      ],
+      "dev-ops": [
+        "Google GCP",
+        "Docker",
+        "Git",
+        "CI/DI",
+        "Jest",
+        "Webpack",
+        "TurboPack"
+      ],
+      "web3": [
+        "WAGMI",
+        "Alchemy",
+        "RainbowKit",
+        "Dynamic"
+      ],
+      "others": [
+        "Paypal",
+        "Stripe"
+      ]
+    }
   },
   "other_exp": {
     "title": ""
   },
   "formation": {},
   "contact": {},
-  "footer": {
-    
-  }
+  "footer": {}
 }
