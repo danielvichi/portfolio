@@ -1,14 +1,20 @@
 import ContainerScreen from "../../_components/container-screen";
 import SectionTitle from "../../_components/section-title";
 
+
+interface Formation {
+  institution: string;
+  degree: string;
+  duration: string;
+}
 interface FormationSectionProps {
   title: string;
-  // content: string;
+  content: Formation[];
 }
 
 export default function FormationSection({
   title,
-  // content,
+  content,
 }: FormationSectionProps) {
   return (
     <ContainerScreen className="px-4 py-24">

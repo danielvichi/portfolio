@@ -2,7 +2,6 @@ import AboutSection from "../_modules/page-sections/about-section";
 import ContactSection from "../_modules/page-sections/contact-section";
 import FormationSection from "../_modules/page-sections/formation-section";
 import HeroSection from "../_modules/page-sections/hero-section";
-import OthersExperienceRoleSection from "../_modules/page-sections/personal-project-section.tsx";
 import PersonalProjectSection from "../_modules/page-sections/personal-project-section.tsx";
 import Footer from "../_components/footer";
 import Header from "../_components/header";
@@ -10,7 +9,7 @@ import PageBackground from "../_components/page-background";
 import { getDictionary, hasLocale } from "./dictionaries";
 import { notFound } from "next/navigation";
 import RecommendationSection from "../_modules/page-sections/recommendation-section/recommendation-section";
-import LastExperienceRoleSection from "../_modules/page-sections/last-experience-role-section";
+import PreviousExperienceRoleSection from "../_modules/page-sections/previous-experience-role-section";
 import ModalProvider from "../_contexts/modal-context";
 
 export default async function HomePage({ params }: PageProps<"/[lang]">) {
@@ -32,18 +31,31 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
             title={dict.endorser.title}
             content={dict.endorser.content}
           />
-          <LastExperienceRoleSection
+          <PreviousExperienceRoleSection
             title={dict.last_exp.title}
             subTitle={dict.last_exp.sub_title}
+            duration={dict.last_exp.duration}
             description={dict.last_exp.description}
             projectsTitle={dict.last_exp.projects_title}
             projects={dict.last_exp.projects}
             techStackTitle={dict.last_exp.tech_stack_title}
             techStack={dict.last_exp.tech_stack}
           />
-          <OthersExperienceRoleSection title="title" />
+          <PreviousExperienceRoleSection
+            title={dict.other_exp.title}
+            subTitle={dict.other_exp.sub_title}
+            duration={dict.other_exp.duration}
+            description={dict.other_exp.description}
+            projectsTitle={dict.other_exp.projects_title}
+            projects={dict.other_exp.projects}
+            techStackTitle={dict.other_exp.tech_stack_title}
+            techStack={dict.other_exp.tech_stack}
+          />
           <PersonalProjectSection title="title" />
-          <FormationSection title="title" />
+          <FormationSection
+            title={dict.formation.title}
+            content={dict.formation.formations}
+          />
           <ContactSection title="title" />
           <Footer />
         </>

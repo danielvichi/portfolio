@@ -4,6 +4,7 @@ export interface TechStack {
   "front-end": string[];
   "back-end"?: string[];
   "dev-ops"?: string[];
+  ux?: string[];
   web3?: string[];
   others?: string[];
 }
@@ -32,6 +33,7 @@ export default function TechStackTags({ techStack }: { techStack: TechStack }) {
   const frontEndTagList = techStack["front-end"];
   const backEndTagList = techStack["back-end"];
   const devOpsTagList = techStack["dev-ops"];
+  const uxTagList = techStack.ux;
   const web3TagList = techStack.web3;
   const otherTagList = techStack.others;
 
@@ -46,16 +48,14 @@ export default function TechStackTags({ techStack }: { techStack: TechStack }) {
       )}
 
       {devOpsTagList ? (
-        <TagListSection title={"DsvOps"} tags={devOpsTagList} />
+        <TagListSection title={"DevOps"} tags={devOpsTagList} />
       ) : (
         ""
       )}
 
-      {web3TagList ? (
-        <TagListSection title={"Web3"} tags={web3TagList} />
-      ) : (
-        ""
-      )}
+      {web3TagList ? <TagListSection title={"Web3"} tags={web3TagList} /> : ""}
+
+      {uxTagList ? <TagListSection title={"UX"} tags={uxTagList} /> : ""}
 
       {otherTagList ? (
         <TagListSection title={"Others"} tags={otherTagList} />

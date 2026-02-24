@@ -13,7 +13,11 @@ export default function ProjectCard(props: ProjectCardProps) {
     <div className="relative flex max-h-[70vh] w-full min-w-[300px] flex-col gap-4 overflow-y-scroll border border-gray-500 p-4">
       <h5 className="bg-accent-tertiary relative w-fit px-2 py-0.5">{title}</h5>
       <Markdown>{description}</Markdown>
-      <img src={coverImageUrl} alt={`${title} project sample image`} />
+      {coverImageUrl ? (
+        <img src={coverImageUrl} alt={`${title} project sample image`} />
+      ) : (
+        ""
+      )}
     </div>
   );
 }
@@ -21,9 +25,9 @@ export default function ProjectCard(props: ProjectCardProps) {
 function ProjectCardThumbnail(props: ProjectCardProps) {
   const { title, coverImageUrl } = props;
   return (
-    <div className="group relative hover:border-accent-primary h-[150px] w-[400px] border border-gray-500 p-4 overflow-hidden transition-all">
+    <div className="group hover:border-accent-primary relative h-[150px] w-[400px] overflow-hidden border border-gray-500 p-4 transition-all">
       <div
-        className="absolute inset-[2px] brightness-50 group-hover:scale-110 transition-all"
+        className="absolute inset-[2px] brightness-50 transition-all group-hover:scale-110"
         style={{
           backgroundImage: `url(${coverImageUrl})`,
           backgroundSize: "cover",

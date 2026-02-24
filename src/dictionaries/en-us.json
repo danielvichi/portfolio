@@ -32,7 +32,7 @@
     ]
   },
   "last_exp": {
-    "title": "Previous Experiences",
+    "title": "Last Experience",
     "sub_title": "KLKTN LTDA / SanFran Tokyo",
     "duration": "from 2021 to 2024",
     "description": "KLKTN as it began was music Web3 startup that pivoted to become SanFran Tokyo, an anime and manga Web3 company. Throughout this journey, I collaborated on various projects where I applied my UI expertise to streamline and polish frontend implementations. While focused on full-time Frontend development, I frequently contributed to Backend tasks when needed to unblock progress and enhance team efficiency.",
@@ -112,35 +112,71 @@
     }
   },
   "other_exp": {
-    "title": "Softcenter Ltda.",
+    "title": "Previous Experience",
+    "sub_title": "Softcenter Ltda.",
     "duration": "from 2018 to 2019",
-    "content": "General description",
-    "sub_title": "Projects Highlight",
+    "description": "Softcenter is a consolidated logistics management software company with a robust and mature solution, I enter to collaborate with new fresh ideas and company re-modernization.",
+    "projects_title": "Projects Highlights",
     "projects": [
       {
         "title": "Software Dashboard",
-        "content": "Designed and Implement a software Dashboard screen for existing solution as away to modernize a legacy technology software utilizing pure Javascript, Html and CSS (LESS)"
+        "description": "Designed and Implement a software Dashboard screen for existing solution as away to modernize a legacy technology software utilizing pure Javascript, Html and CSS (LESS)"
       },
       {
         "title": "Marketing Tasks",
-        "content": "Worked also for Market department on planing, help re-shaping marketing strategies and measurements."
+        "description": "Worked also for Market department on planing, help re-shaping marketing strategies and measurements."
       }
     ],
+    "tech_stack_title": "Tech Stack and tools",
     "tech_stack": {
-      "Front-end": [
+      "front-end": [
         "Javascript",
         "LESS",
         "Chart.js"
       ],
-      "UX": [
+      "ux": [
         "Wireframe",
         "Flowchart",
         "Interfaces Design"
       ],
       "others": [
         "Adobe creative suite",
-        "RDStation",
         "Google Analytics"
+      ]
+    }
+  },
+  "personal_project": {
+    "title": "Personal Project",
+    "sub-title": "Espera Queue",
+    "description": "Espera Queue (project code name) is a personal WIP project that aims practice and also showcase, test and learn more about a full-stack role, the test project is a solution to manage restaurants, bars and other types of business that needs to to manage waiting lines when it need at most, when business is running on max capacity and it needs all workforce to attend seated customers, Espera Queue automatically manages waiting lines",
+    "tech_stack_title": "Tech Stack and tools",
+    "tech_stack": {
+      "front-end": [
+        "React.Js",
+        "Next.js",
+        "Typescript",
+        "Axios",
+        "ZuStand",
+        "Tailwind",
+        "Radix",
+        "React Spring",
+        "StoryBook",
+        "Google Tag Manager",
+        "CSP (Content Security Policy)"
+      ],
+      "back-end": [
+        "Node.js",
+        "Prisma ORM",
+        "Nest.Js",
+        "REST API"
+      ],
+      "dev-ops": [
+        "Google GCP",
+        "Docker",
+        "Git",
+        "CI/DI",
+        "Jest",
+        "Webpack"
       ]
     }
   },
@@ -159,6 +195,12 @@
       }
     ]
   },
-  "contact": {},
-  "footer": {}
+  "contact": {
+    "title": "Get in touch",
+    "description": "Subscribe for a follow up or send me Hi at"
+  },
+  "footer": {
+    "rights": "All rights reserved",
+    "resume": "Resume"
+  }
 }

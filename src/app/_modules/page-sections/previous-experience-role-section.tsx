@@ -6,9 +6,10 @@ import TechStackTags from "../tech-stack-tags";
 import type { ProjectCardProps } from "../projects-list/project-card";
 import ProjectCardList from "../projects-list/project-card-list";
 
-interface LastExperienceRoleSectionProps {
+interface PreviousExperienceRoleSectionProps {
   title: string;
   subTitle: string;
+  duration: string;
   description: string;
   projectsTitle: string;
   projects: ProjectCardProps[];
@@ -19,12 +20,20 @@ interface LastExperienceRoleSectionProps {
 interface DescriptionSectionProps {
   title: string;
   description: string;
+  duration: string;
 }
 
-function DescriptionSection({ title, description }: DescriptionSectionProps) {
+function DescriptionSection({
+  title,
+  duration,
+  description,
+}: DescriptionSectionProps) {
   return (
     <div className="flex flex-col gap-1">
-      <h3>{title}</h3>
+      <h3 className="text-2xl text-accent-primary">{title}</h3>
+      <span className="text-sm font-bold text-accent-tertiary">
+        <Markdown>{duration}</Markdown>
+      </span>
       <Markdown>{description}</Markdown>
     </div>
   );
@@ -60,13 +69,14 @@ function TechStackSection({ title, techStack }: TechStackSectionProps) {
   );
 }
 
-export default function LastExperienceRoleSection(
-  props: LastExperienceRoleSectionProps,
+export default function PreviousExperienceRoleSection(
+  props: PreviousExperienceRoleSectionProps,
 ) {
   const {
     title,
     subTitle,
     description,
+    duration,
     projectsTitle,
     projects,
     techStackTitle,
@@ -76,7 +86,11 @@ export default function LastExperienceRoleSection(
     <div className="flex flex-col gap-8">
       <ContainerScreen className="flex min-h-0! flex-col gap-8 px-4 pt-24">
         <SectionTitle>{title}</SectionTitle>
-        <DescriptionSection title={subTitle} description={description} />
+        <DescriptionSection
+          title={subTitle}
+          duration={duration}
+          description={description}
+        />
       </ContainerScreen>
 
       <ProjectsSection title={projectsTitle} projectsList={projects} />

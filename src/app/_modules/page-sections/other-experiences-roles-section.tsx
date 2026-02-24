@@ -3,6 +3,7 @@ import SectionTitle from "../../_components/section-title";
 
 interface OtherExperienceContent {
   companyName: string;
+  duration: string;
   aboutExperience: string;
   techStack?: string[];
 }
