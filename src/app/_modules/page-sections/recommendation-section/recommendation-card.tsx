@@ -33,7 +33,7 @@ function EndorseCard(props: EndorseCardProps) {
   const { name, role, comment, source, sourceUrl } = props;
 
   return (
-    <div className="bg-background-secondary relative flex flex-col gap-4 border border-gray-500 p-8">
+    <div className="bg-background-secondary  max-h-[70vh] overflow-y-scroll relative flex flex-col gap-4 border border-gray-500 p-8">
       <QuoteIcon className="stroke-accent-tertiary absolute top-6 right-6 stroke-1 opacity-30" />
 
       <div className="flex flex-col gap-4 text-sm">

@@ -4,6 +4,7 @@ import Carrousel from "../../_components/carrousel";
 import type { ProjectCardProps } from "./project-card";
 import ProjectCard from "./project-card";
 import { useModalContext } from "../../_contexts/modal-context";
+import HorizontalScroll from "~/app/_components/horizonta-scroll";
 
 interface ProjectCardListProps {
   projectList: ProjectCardProps[];
@@ -53,9 +54,7 @@ export default function ProjectCardList({ projectList }: ProjectCardListProps) {
   ));
   return (
     <div className={"w-full overflow-hidden"}>
-      <div className="flex w-fit flex-row gap-4">
-        {projectCardThumbnailsList}
-      </div>
+      <HorizontalScroll>{projectCardThumbnailsList}</HorizontalScroll>
     </div>
   );
 }
