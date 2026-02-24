@@ -34,32 +34,33 @@
   "last_exp": {
     "title": "Previous Experiences",
     "sub_title": "KLKTN LTDA / SanFran Tokyo",
-    "description": "General description of journey",
+    "duration": "from 2021 to 2024",
+    "description": "KLKTN as it began was music Web3 startup that pivoted to become SanFran Tokyo, an anime and manga Web3 company. Throughout this journey, I collaborated on various projects where I applied my UI expertise to streamline and polish frontend implementations. While focused on full-time Frontend development, I frequently contributed to Backend tasks when needed to unblock progress and enhance team efficiency.",
     "projects_title": "Projects Highlights",
     "projects": [
       {
         "title": "Weebox",
-        "description": "A Anime / Manga hight interactive NFT store with a storytelling. I worked in a Gacha like machine feature Front-end and also all pages animations and structures",
+        "description": "A highly interactive NFT store for anime and manga, built around a storytelling experience. I was responsible for the frontend implementation of a Gacha machine feature, as well as all page animations and structural development.",
         "coverImageUrl": "https://picsum.photos/600/400"
       },
       {
         "title": "SFT Studios",
-        "description": "about SFT Studios project",
+        "description": "As the umbrella institution for all projects, SFT Studios required a robust online presence. I built its page from scratch, taking full ownership of the development, deployment, and maintenance.",
         "coverImageUrl": "https://picsum.photos/600/400"
       },
       {
         "title": "Anime ID",
-        "description": "about Anime ID project",
+        "description": "Anime ID is a platform for anime and manga fans to connect and create an identity rooted in their fan assets. I contributed to the first version of the client dashboard, handling Frontend development while also delivering complete Backend features.",
         "coverImageUrl": "https://picsum.photos/600/400"
       },
       {
         "title": "Maru Project",
-        "description": "about MAru project",
+        "description": "Maru was a campaign by the Japanese band Gesu no Kiwami Otome, created to share band news alongside the release of an exclusive new single. The single was transformed into NFT art featuring fragments of the songs, all showcased on a dedicated landing page. I contributed to the majority of the project, developing the NFT animations, processing NFT assetsm building the landing page, and integrating PayPal. Additionally, special NFTs included an exclusive physical LP featuring the NFT art and song.",
         "coverImageUrl": "https://picsum.photos/600/400"
       },
       {
         "title": "KLKTN",
-        "description": "about KLKTN.com project",
+        "description": "KLKTN was a Kickstarter project that combined an institutional presence with an NFT store and showcase for K-pop and independent musicians. The platform featured a fresh design by a fashion-industry designer, giving it a strong and distinctive identity. I contributed by developing Frontend components and automating asset processing through batch scripts.",
         "coverImageUrl": "https://picsum.photos/600/400"
       }
     ],
@@ -112,12 +113,17 @@
   },
   "other_exp": {
     "title": "Softcenter Ltda.",
+    "duration": "from 2018 to 2019",
     "content": "General description",
     "sub_title": "Projects Highlight",
     "projects": [
       {
         "title": "Software Dashboard",
         "content": "Designed and Implement a software Dashboard screen for existing solution as away to modernize a legacy technology software utilizing pure Javascript, Html and CSS (LESS)"
+      },
+      {
+        "title": "Marketing Tasks",
+        "content": "Worked also for Market department on planing, help re-shaping marketing strategies and measurements."
       }
     ],
     "tech_stack": {
@@ -130,7 +136,29 @@
         "Wireframe",
         "Flowchart",
         "Interfaces Design"
+      ],
+      "others": [
+        "Adobe creative suite",
+        "RDStation",
+        "Google Analytics"
       ]
     }
-  }
+  },
+  "formation": {
+    "title": "Formation",
+    "formations": [
+      {
+        "institution": "UTFPR - Universidade Tecnológica Federal do Paraná campus Londrina / Paraná Federal Technology University Londrina campus",
+        "degree": "Web development especialization (lato sensu)",
+        "duration": "from 2012 to 2023"
+      },
+      {
+        "institution": "UEL - Universidade Estadual de Londrina / Londrina State University",
+        "degree": "Graphic Design Degree",
+        "duration": "from 2008 to 2011"
+      }
+    ]
+  },
+  "contact": {},
+  "footer": {}
 }

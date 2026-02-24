@@ -34,32 +34,33 @@
   "last_exp": {
     "title": "Ultimas Experiências",
     "sub_title": "KLKTN LTDA / SanFran Tokyo",
-    "description": "Descrição da jornada",
+    "duration": "from 2021 to 2024",
+    "description": "Inicialmente KLKTN uma startup de Web3 focada em música, que se transformou na SanFran Tokyo, uma empresa de Web3 voltada para anime e mangá. Ao longo dessa jornada, colaborei em diversos projetos, aplicando minha experiência em UI para otimizar e aprimorar implementações de frontend. Embora focado no desenvolvimento Frontend em tempo integral, contribuí frequentemente com tarefas de Backend quando necessário para desbloquear o progresso e aumentar a eficiência da equipe.",
     "projects_title": "Projetos Relevantes",
     "projects": [
       {
         "title": "Weebox",
-        "description": "A Anime / Manga hight interactive NFT store with a storytelling. I worked in a Gacha like machine feature Front-end and also all pages animations and structures",
+        "description": "Uma loja NFT altamente interativa de anime e mangá, construída em torno de uma experiência de storytelling. Fui responsável pela implementação do frontend de um recurso de máquina de Gacha, bem como por todas as animações das páginas e pelo desenvolvimento estrutural.",
         "coverImageUrl": "https://picsum.photos/600/400"
       },
       {
         "title": "SFT Studios",
-        "description": "about SFT Studios project",
+        "description": "Como instituição guarda-chuva de todos os projetos, a SFT Studios exigia uma presença online robusta. Construí sua página do zero, assumindo total responsabilidade pelo desenvolvimento, implantação e manutenção.",
         "coverImageUrl": "https://picsum.photos/600/400"
       },
       {
         "title": "Anime ID",
-        "description": "about Anime ID project",
+        "description": "O Anime ID é uma plataforma para fãs de anime e mangá se conectarem e criarem uma identidade enraizada em seus ativos de fã. Contribuí para a primeira versão do dashboard do cliente, cuidando do desenvolvimento Frontend e também entregando funcionalidades completas no Backend.",
         "coverImageUrl": "https://picsum.photos/600/400"
       },
       {
         "title": "Maru Project",
-        "description": "about MAru project",
+        "description": "Maru foi uma campanha da banda japonesa Gesu no Kiwami Otome, criada paradivulgar novidades da banda junto com o lançamento de um single novo e exclusivo. O single foi transformado em arte NFT com fragmentos das músicas, tudo apresentado em uma landing page dedicada. Contribuí para a maior parte do projeto, desenvolvendo as animações dos NFTs, processando os assets dos NFTs, construindo a landing page e integrando o PayPal. Além disso, NFTs especiais incluíam um LP físico exclusivo com a arte do NFT e a música.",
         "coverImageUrl": "https://picsum.photos/600/400"
       },
       {
         "title": "KLKTN",
-        "description": "about KLKTN.com project",
+        "description": "O KLKTN foi um projeto do Kickstarter que combinava uma presença institucional com uma loja e vitrine de NFTs para músicos de K-pop e independentes. A plataforma contava com um design inovador criado por um designer da indústria da moda, conferindo-lhe uma identidade forte e diferenciada. Contribuí desenvolvendo componentes de Frontend e automatizando o processamento de assets por meio de scripts",
         "coverImageUrl": "https://picsum.photos/600/400"
       }
     ],
@@ -111,9 +112,53 @@
     }
   },
   "other_exp": {
-    "title": ""
+    "title": "Softcenter Ltda.",
+    "duration": "from 2018 to 2019",
+    "content": "General description",
+    "sub_title": "Projects Highlight",
+    "projects": [
+      {
+        "title": "Software Dashboard",
+        "content": "Designed and Implement a software Dashboard screen for existing solution as away to modernize a legacy technology software utilizing pure Javascript, Html and CSS (LESS)"
+      },
+      {
+        "title": "Marketing Tasks",
+        "content": "Worked also for Market department on planing, help re-shaping marketing strategies and measurements."
+      }
+    ],
+    "tech_stack": {
+      "Front-end": [
+        "Javascript",
+        "LESS",
+        "Chart.js"
+      ],
+      "UX": [
+        "Wireframe",
+        "Flowchart",
+        "Interfaces Design"
+      ],
+      "others": [
+        "Adobe creative suite",
+        "RDStation",
+        "Google Analytics"
+      ]
+    }
   },
-  "formation": {},
+   "formation": {
+    "title": "Formação",
+    "formations": [
+      {
+        "institution": "UTFPR - Universidade Tecnológica Federal do Paraná campus Londrina",
+        "degree": "Especialização em desenvolvimento Web",
+        "duration": "from 2012 to 2023"
+      },
+      {
+        "institution": "UEL - Universidade Estadual de Londrina ",
+        "degree": "Graduação em Design Gráfico",
+        "duration": "from 2008 to 2011"
+      }
+    ]
+  },
   "contact": {},
   "footer": {}
 }
