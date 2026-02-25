@@ -120,18 +120,18 @@
     "projects": [
       {
         "title": "Software Dashboard",
-        "description": "Designed and Implement a software Dashboard screen for existing solution as away to modernize a legacy technology software utilizing pure Javascript, Html and CSS (LESS)"
+        "description": "Designed and Implement a software Dashboard screen with modern standard for better report consumption as way to provide better insights scenarios for clients for existing solution. The project has some technologies restrictions so pure Javascript, Html and CSS (SASS) were utilized to implement this project"
       },
       {
         "title": "Marketing Tasks",
-        "description": "Worked also for Market department on planing, help re-shaping marketing strategies and measurements."
+        "description": "Worked also for Market department on planing helping re-shaping marketing strategies and measurements assisting with content planning and creation for better leads and sales process."
       }
     ],
     "tech_stack_title": "Tech Stack and tools",
     "tech_stack": {
       "front-end": [
         "Javascript",
-        "LESS",
+        "Sass/SCSS",
         "Chart.js"
       ],
       "ux": [
