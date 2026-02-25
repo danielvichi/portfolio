@@ -19,7 +19,8 @@ export default function HeroSection({ title, subTitle }: HeroSectionProps) {
         </div>
       </div>
 
-      <div className="flex w-full items-center justify-center">
+      <div className="relative flex w-full items-center justify-center">
+        <div className="absolute -ml-[180px] w-[60px] h-[60px] bg-accent-primary rounded-full"/>
         <ChevronRight className="fill-accent-primary scale-150" />
       </div>
     </ContainerScreen>
