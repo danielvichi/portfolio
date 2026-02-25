@@ -11,16 +11,16 @@ export interface EndorseCardProps {
   sourceUrl: string;
 }
 
-interface SourceLinkProps {
+interface SourceLinkProps extends React.HTMLAttributes<HTMLDivElement> {
   sourceTitle: string;
   url: string;
 }
 
 function SourceLink(props: SourceLinkProps) {
-  const { sourceTitle, url } = props;
+  const { sourceTitle, url, className, ...rest } = props;
 
   return (
-    <div className="flex flex-row gap-2">
+    <div className={`flex flex-row gap-2 ${className}`} {...rest}>
       Source:
       <ExternalLink href={url} target="_blank">
         {sourceTitle}
@@ -30,26 +30,37 @@ function SourceLink(props: SourceLinkProps) {
 }
 
 function EndorseCard(props: EndorseCardProps) {
-  const { name, role, comment, source, sourceUrl } = props;
+  const { name, role, comment, profilePictureUrl, source, sourceUrl } = props;
 
   return (
-    <div className="bg-background-secondary  max-h-[70vh] overflow-y-scroll relative flex flex-col gap-4 border border-gray-500 p-8">
+    <div className="bg-background-secondary relative flex max-h-[70vh] flex-col gap-4 overflow-y-scroll border border-gray-500 p-8">
       <QuoteIcon className="stroke-accent-tertiary absolute top-6 right-6 stroke-1 opacity-30" />
 
       <div className="flex flex-col gap-4 text-sm">
         <Markdown>{comment}</Markdown>
       </div>
 
-      <div>
-        <h3 className="text-xl font-extrabold">
-          <Markdown>{name}</Markdown>
-        </h3>
-        <span className="text-accent-tertiary">
-          <Markdown>{role}</Markdown>
-        </span>
-      </div>
+      <div className="w-full mt-4 flex flex-row gap-4">
+        <img
+          src={profilePictureUrl}
+          className="h-[110px] w-[110px]"
+          alt={`${name} profile picure`}
+        />
 
-      <SourceLink sourceTitle={source} url={sourceUrl} />
+        <div className="flex flex-col">
+          <h3 className="text-xl font-extrabold">
+            <Markdown>{name}</Markdown>
+          </h3>
+          <span className="text-accent-tertiary">
+            <Markdown>{role}</Markdown>
+          </span>
+        </div>
+          <SourceLink
+            sourceTitle={source}
+            url={sourceUrl}
+            className="self-end ml-auto"
+          />
+      </div>
     </div>
   );
 }
@@ -65,11 +76,10 @@ function EndorseCardThumbnail(props: EndorseCardThumbnailProps) {
 
   return (
     <div className="group hover:border-accent-primary relative flex flex-row border border-gray-500 transition-all">
-
-      <div className="max-h-[150px] min-w-[150px] aspect-square overflow-hidden">
+      <div className="aspect-square max-h-[150px] min-w-[150px] overflow-hidden">
         <img
           src={profilePictureUrl}
-          className="aspect-square group-hover:scale-110 transition-all"
+          className="aspect-square transition-all group-hover:scale-110"
           alt={`${name} profile picture`}
         />
       </div>
@@ -82,8 +92,6 @@ function EndorseCardThumbnail(props: EndorseCardThumbnailProps) {
           <Markdown>{role}</Markdown>
         </span>
       </div>
-
-      
     </div>
   );
 }
