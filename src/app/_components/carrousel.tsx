@@ -12,14 +12,14 @@ function BreadCrumbs(props: BreadCrumbsProps) {
   const items = [...Array.from({ length: length })].map((_item, index) => (
     <div
       key={index}
-      className={`h-1.5 w-1.5 ${
-        activeItemIndex === index ? "bg-accent-tertiary" : "bg-gray-900"
+      className={ `h-1.5 w-1.5 ${
+        activeItemIndex === index ? "bg-accent-tertiary" : "bg-gray-600"
       }`}
     />
   ));
 
   return (
-    <div className="flex justify-center mt-4">
+    <div className="absolute border-0 m-auto w-full flex justify-center mt-4">
       <div className="flex gap-1">{items}</div>
     </div>
   );
@@ -36,7 +36,7 @@ function NavigationButton(props: NavigationButton) {
   const { className, type, ...rest } = props;
   return (
     <button
-      className={`group flex items-center px-[10px] transition-opacity hover:cursor-pointer disabled:cursor-auto disabled:opacity-0 ${className}`}
+      className={`group flex items-center px-3 transition-opacity hover:cursor-pointer disabled:cursor-auto disabled:opacity-0 ${className}`}
       {...rest}
     >
       <div
@@ -45,7 +45,7 @@ function NavigationButton(props: NavigationButton) {
         }`}
       />
       <ChevronRight
-        className={`fill-background-primary relative h-[20px] w-[20px] opacity-40 transition-opacity group-hover:scale-110 group-hover:opacity-100 group-active:scale-95 group-disabled:scale-100 ${type === "previous" ? "rotate-180" : ""}`}
+        className={`fill-background-primary stroke-2 stroke-accent-tertiary relative h-[30px] w-[30px] transition-opacity group-hover:scale-110 group-hover:opacity-100 group-active:scale-95 group-disabled:scale-100 ${type === "previous" ? "rotate-180" : ""}`}
       />
     </button>
   );
