@@ -1,4 +1,4 @@
-import Tag from "../_components/tag";
+import Tag from "~/app/_components/tag";
 
 export interface TechStack {
   "front-end": string[];

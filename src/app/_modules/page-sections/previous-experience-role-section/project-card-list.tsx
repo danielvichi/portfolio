@@ -1,10 +1,10 @@
 "use client";
 
-import Carrousel from "../../_components/carrousel";
+import { useModalContext } from "~/app/_contexts/modal-context";
 import type { ProjectCardProps } from "./project-card";
 import ProjectCard from "./project-card";
-import { useModalContext } from "../../_contexts/modal-context";
 import HorizontalScroll from "~/app/_components/horizonta-scroll";
+import Carrousel from "~/app/_components/carrousel";
 
 interface ProjectCardListProps {
   projectList: ProjectCardProps[];

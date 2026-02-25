@@ -9,8 +9,8 @@ import PageBackground from "../_components/page-background";
 import { getDictionary, hasLocale } from "./dictionaries";
 import { notFound } from "next/navigation";
 import RecommendationSection from "../_modules/page-sections/recommendation-section/recommendation-section";
-import PreviousExperienceRoleSection from "../_modules/page-sections/previous-experience-role-section";
 import ModalProvider from "../_contexts/modal-context";
+import PreviousExperienceRoleSection from "../_modules/page-sections/previous-experience-role-section/previous-experience-role-section";
 
 export default async function HomePage({ params }: PageProps<"/[lang]">) {
   const { lang } = await params;
