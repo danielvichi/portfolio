@@ -82,22 +82,23 @@
         "React Three Fiber (3D)",
         "Sentry",
         "Google Tag Manager",
-        "CSP (Content Security Policy)"
+        "CSP (Content Security Policy)",
+        "Jest",
+        "Webpack",
+        "TurboPack"
       ],
       "back-end": [
         "Node.js",
         "Prisma ORM",
         "Nest.Js",
-        "REST API"
+        "REST API",
+        "Jest"
       ],
       "dev-ops": [
         "Google GCP",
         "Docker",
         "Git",
-        "CI/DI",
-        "Jest",
-        "Webpack",
-        "TurboPack"
+        "CI/DI"
       ],
       "web3": [
         "WAGMI",
@@ -149,6 +150,7 @@
     "title": "Personal Project",
     "sub-title": "Espera Queue",
     "description": "Espera Queue (project code name) is a personal WIP project that aims practice and also showcase, test and learn more about a full-stack role, the test project is a solution to manage restaurants, bars and other types of business that needs to to manage waiting lines when it need at most, when business is running on max capacity and it needs all workforce to attend seated customers, Espera Queue automatically manages waiting lines",
+    "github_title": "Página dos projetos no Github",
     "tech_stack_title": "Tech Stack and tools",
     "tech_stack": {
       "front-end": [
@@ -162,21 +164,22 @@
         "React Spring",
         "StoryBook",
         "Google Tag Manager",
-        "CSP (Content Security Policy)"
+        "CSP (Content Security Policy)",
+        "Jest",
+        "Webpack"
       ],
       "back-end": [
         "Node.js",
         "Prisma ORM",
         "Nest.Js",
-        "REST API"
+        "REST API",
+        "Jest"
       ],
       "dev-ops": [
         "Google GCP",
         "Docker",
         "Git",
-        "CI/DI",
-        "Jest",
-        "Webpack"
+        "CI/DI"
       ]
     }
   },
