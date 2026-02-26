@@ -1,0 +1,36 @@
+#Reading material:
+#HELP: https://cloud.google.com/build/docs/deploy-containerized-application-cloud-run
+#HELP: https://cloud.google.com/build/docs/automate-builds
+#HELP: https://cloud.google.com/run/docs/continuous-deployment-with-cloud-build
+steps:
+  # Build the container image
+  - name: "gcr.io/cloud-builders/docker"
+    args:
+      [
+        "build",
+        "-t",
+        "gcr.io/danielvichi/danielvichi-production",
+        "--build-arg=BUILD_PROD=0",
+        ".",
+      ]
+    env:
+  # Push the container image to Container Registry
+  - id: docker-push
+    name: "gcr.io/cloud-builders/docker"
+    args: ["push", "gcr.io/danielvichi/danielvichi-production"]
+  # Deploy container image to Cloud Run
+  - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
+    entrypoint: gcloud
+    args:
+      [
+        "run",
+        "deploy",
+        "danielvichi-production",
+        "--image",
+        "gcr.io/danielvichi/danielvichi-production",
+        "--region",
+        "us-west1",
+        "--port=3000",
+        "--allow-unauthenticated",
+      ]
+timeout: 900s
