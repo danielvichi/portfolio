@@ -1,11 +1,11 @@
 import Markdown from "react-markdown";
 import type { ProjectCardProps } from "./project-card";
 import ProjectCardList from "./project-card-list";
-import type { TechStack } from "./tech-stack-tags";
-import TechStackTags from "./tech-stack-tags";
+import type { TechStack } from "../../tech-stack-tags";
+import TechStackTags from "../../tech-stack-tags";
 import ContainerScreen from "~/app/_components/container-screen";
-import SectionTitle from "~/app/_components/section-title";
-
+import SectionTitle from "~/app/_components/titles";
+import ContentWrapper from "~/app/_components/content-wrapper";
 
 interface PreviousExperienceRoleSectionProps {
   title: string;
@@ -31,8 +31,8 @@ function DescriptionSection({
 }: DescriptionSectionProps) {
   return (
     <div className="flex flex-col gap-1">
-      <h3 className="text-2xl text-accent-primary">{title}</h3>
-      <span className="text-sm font-bold text-accent-tertiary">
+      <h3 className="text-accent-primary text-2xl">{title}</h3>
+      <span className="text-accent-tertiary text-sm font-bold">
         <Markdown>{duration}</Markdown>
       </span>
       <Markdown>{description}</Markdown>
@@ -48,8 +48,10 @@ interface ProjectsSectionProps {
 function ProjectsSection({ title, projectsList }: ProjectsSectionProps) {
   return (
     <>
-      <div className="relative container mx-auto">
-        <h4>{title}</h4>
+      <div className="relative container mx-auto pl-4">
+        <ContentWrapper>
+          <SectionTitle.h3>{title}</SectionTitle.h3>
+        </ContentWrapper>
       </div>
       <ProjectCardList projectList={projectsList} />
     </>
@@ -63,10 +65,10 @@ interface TechStackSectionProps {
 
 function TechStackSection({ title, techStack }: TechStackSectionProps) {
   return (
-    <>
-      <h4>{title}</h4>
+    <ContentWrapper>
+      <SectionTitle.h3>{title}</SectionTitle.h3>
       <TechStackTags techStack={techStack} />
-    </>
+    </ContentWrapper>
   );
 }
 
@@ -84,14 +86,16 @@ export default function PreviousExperienceRoleSection(
     techStack,
   } = props;
   return (
-    <div className="flex flex-col gap-8">
-      <ContainerScreen className="flex min-h-0! flex-col gap-8 px-4 pt-24">
-        <SectionTitle>{title}</SectionTitle>
-        <DescriptionSection
-          title={subTitle}
-          duration={duration}
-          description={description}
-        />
+    <div className="flex flex-col gap-4">
+      <ContainerScreen className="flex min-h-0! flex-col gap-4 px-4 pt-24">
+        <SectionTitle.h2>{title}</SectionTitle.h2>
+        <ContentWrapper>
+          <DescriptionSection
+            title={subTitle}
+            duration={duration}
+            description={description}
+          />
+        </ContentWrapper>
       </ContainerScreen>
 
       <ProjectsSection title={projectsTitle} projectsList={projects} />

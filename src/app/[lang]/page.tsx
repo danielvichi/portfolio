@@ -51,12 +51,22 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
             techStackTitle={dict.other_exp.tech_stack_title}
             techStack={dict.other_exp.tech_stack}
           />
-          <PersonalProjectSection title="title" />
+          <PersonalProjectSection
+            title={dict.personal_project.title}
+            subTitle={dict.personal_project["sub-title"]}
+            description={dict.personal_project.description}
+            githubTitle={dict.personal_project.github_title}
+            techStackTitle={dict.personal_project.tech_stack_title}
+            techStack={dict.personal_project.tech_stack}
+          />
           <FormationSection
             title={dict.formation.title}
             content={dict.formation.formations}
           />
-          <ContactSection title="title" />
+          <ContactSection
+            title={dict.contact.title}
+            description={dict.contact.description}
+          />
           <Footer />
         </>
       </ModalProvider>

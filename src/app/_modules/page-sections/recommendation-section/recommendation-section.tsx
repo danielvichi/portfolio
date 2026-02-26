@@ -1,7 +1,7 @@
 "use client";
 
 import ContainerScreen from "../../../_components/container-screen";
-import SectionTitle from "../../../_components/section-title";
+import SectionTitle from "../../../_components/titles";
 import Markdown from "react-markdown";
 import { HeartIcon } from "@radix-ui/react-icons";
 import EndorseCard, { type EndorseCardProps } from "./recommendation-card";
@@ -64,11 +64,11 @@ export default function RecommendationSection({
 
   return (
     <ContainerScreen className="flex flex-col gap-8 px-4 py-24">
-      <SectionTitle
+      <SectionTitle.h2
         customIcon={<HeartIcon className="text-accent-primary h-8 w-8" />}
       >
         <Markdown>{title}</Markdown>
-      </SectionTitle>
+      </SectionTitle.h2>
 
       <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">{recommendationThumbnailList}</div>
     </ContainerScreen>

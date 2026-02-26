@@ -85,9 +85,9 @@ function EndorseCardThumbnail(props: EndorseCardThumbnailProps) {
       </div>
 
       <div className="p-4 text-left text-wrap">
-        <h3 className="text-xl font-extrabold">
+        <h1 className="text-xl font-extrabold">
           <Markdown>{name}</Markdown>
-        </h3>
+        </h1>
         <span className="text-accent-tertiary leading-5">
           <Markdown>{role}</Markdown>
         </span>

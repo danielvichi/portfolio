@@ -9,13 +9,7 @@ export interface TechStack {
   others?: string[];
 }
 
-export function TagListSection({
-  title,
-  tags,
-}: {
-  title: string;
-  tags: string[];
-}) {
+function TagListSection({ title, tags }: { title: string; tags: string[] }) {
   const tagList = tags.map((tag) => (
     <Tag key={tag} size="sm">
       {tag}

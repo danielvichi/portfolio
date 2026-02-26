@@ -19,7 +19,7 @@ export default function HorizontalScroll(props: HorizontalScrollProps) {
   return (
     <div
       ref={scrollWrapper}
-      className="flex flex-row gap-2 overflow-x-scroll border px-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+      className="flex flex-row gap-2 overflow-x-scroll px-2 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
       {...events}
     >
       {children}
