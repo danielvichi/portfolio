@@ -9,7 +9,7 @@ steps:
       [
         "build",
         "-t",
-        "gcr.io/danielvichi/danielvichi-production",
+        "us-west1-docker.pkg.dev/danielvichi/danielvichi-production",
         "--build-arg=BUILD_PROD=0",
         ".",
       ]
@@ -17,7 +17,7 @@ steps:
   # Push the container image to Container Registry
   - id: docker-push
     name: "gcr.io/cloud-builders/docker"
-    args: ["push", "gcr.io/danielvichi/danielvichi-production"]
+    args: ["push", "us-west1-docker.pkg.dev/danielvichi/danielvichi-production"]
   # Deploy container image to Cloud Run
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
     entrypoint: gcloud
@@ -27,10 +27,13 @@ steps:
         "deploy",
         "danielvichi-production",
         "--image",
-        "gcr.io/danielvichi/danielvichi-production",
+        "us-west1-docker.pkg.dev/danielvichi/danielvichi-production",
         "--region",
         "us-west1",
         "--port=3000",
         "--allow-unauthenticated",
       ]
 timeout: 900s
+
+options:
+  logging: CLOUD_LOGGING_ONLY
