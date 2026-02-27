@@ -15,15 +15,15 @@ const robotoMono = Roboto_Mono({
   variable: "--font-roboto-mono-sans",
 });
 
-// const mailerLite = `
-//  (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
-//     .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
-//     n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
-//     (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
-//     ml('account', '2143455');`;
+const mailerLite = `
+ (function(w,d,e,u,f,l,n){w[f]=w[f]||function(){(w[f].q=w[f].q||[])
+    .push(arguments);},l=d.createElement(e),l.async=1,l.src=u,
+    n=d.getElementsByTagName(e)[0],n.parentNode.insertBefore(l,n);})
+    (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
+    ml('account', '2143455');`;
 
 export async function generateStaticParams() {
-  return [{ lang: "en-US" }, { lang: "de" }];
+  return [{ lang: "en" }, { lang: "pt" }];
 }
 
 export default async function RootLayout({
@@ -33,7 +33,7 @@ export default async function RootLayout({
   const { lang } = await params;
   return (
     <html lang={lang} className={`${robotoMono.variable}`}>
-      {/* <Script id="mailer-lite">{mailerLite}</Script> */}
+      <Script id="mailer-lite">{mailerLite}</Script>
       <body>{children}</body>
     </html>
   );
