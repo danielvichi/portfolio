@@ -6,6 +6,7 @@ export interface ProjectCardProps {
   description: string;
   projectUrl?: string;
   coverImageUrl?: string;
+  thumbnailUrl?: string;
 }
 
 function ImageBackground({ imgUrl }: { imgUrl: string }) {
@@ -50,7 +51,7 @@ export default function ProjectCard(props: ProjectCardProps) {
       <h5 className="bg-accent-tertiary relative w-fit px-2 py-0.5 text-2xl">
         {title}
       </h5>
-      <div className="flex flex-col p-4 px-8 md:px-16">
+      <div className="flex flex-col gap-8 p-4 px-8 md:px-16">
         <Markdown>{description}</Markdown>
         {coverImageUrl ? (
           <img src={coverImageUrl} alt={`${title} project sample image`} />
@@ -63,11 +64,11 @@ export default function ProjectCard(props: ProjectCardProps) {
 }
 
 function ProjectCardThumbnail(props: ProjectCardProps) {
-  const { title, coverImageUrl } = props;
+  const { title, thumbnailUrl } = props;
   return (
     <div className="group hover:border-accent-primary relative h-[150px] w-[400px] overflow-hidden border border-gray-500 p-4 transition-all">
-      {coverImageUrl ? (
-        <ImageBackground imgUrl={coverImageUrl} />
+      {thumbnailUrl ? (
+        <ImageBackground imgUrl={thumbnailUrl} />
       ) : (
         <DevBackground />
       )}

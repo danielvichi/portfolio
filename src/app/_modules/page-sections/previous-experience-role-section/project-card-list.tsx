@@ -48,7 +48,7 @@ export default function ProjectCardList({ projectList }: ProjectCardListProps) {
       <ProjectCard.thumbnail
         title={project.title}
         description={project.description}
-        coverImageUrl={project.coverImageUrl}
+        thumbnailUrl={project.thumbnailUrl}
       />
     </button>
   ));

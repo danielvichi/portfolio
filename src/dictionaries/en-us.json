@@ -16,7 +16,7 @@
       {
         "name": "Ervin Mamutov",
         "role": "Senior Software Engineer co-worker at KLKTN",
-        "profilePictureUrl": "https://picsum.photos/400/400",
+        "profilePictureUrl": "https://storage.googleapis.com/assets.danielvichi.com/recommendation_pp_em01.jpg",
         "comment": "Daniel is one of the most talented and dedicated people I’ve ever worked with. Watching him grow from a graphic designer into a highly skilled engineer in just three years was incredible. It really shows his discipline, hard work, and natural talent. \n\n What truly sets Daniel apart is his approach to teamwork. He’s always the first to step up, no matter the task, and consistently delivers thoughtful, precise, and well-rounded solutions. He has a great sense for making sure his work is both user-friendly and robust. Beyond that, he brings so much positivity and energy to the team—it’s impossible to overstate how much better he makes the work environment. \n\n Any team would be lucky to have Daniel. He’s not just talented; he’s the kind of teammate who makes everyone around him better.",
         "source": "Linkedin",
         "sourceUrl": "https://www.linkedin.com/in/daniel-ishigaki"
@@ -24,7 +24,7 @@
       {
         "name": "Fabien Allanic",
         "role": "Engineering leader - CTO at KLKTN",
-        "profilePictureUrl": "https://picsum.photos/400/400",
+        "profilePictureUrl": "https://storage.googleapis.com/assets.danielvichi.com/recommendation_pp_fa01.jpg",
         "comment": "I had the pleasure to manage Daniel for a few years at KLKTN. \n\n Daniel is not only talented and good at what he does, but he also embodies what I love to see in each engineer: being proactive with things, lead by example, willing to learn and grow, and is always up for a challenge. \n\n He has delivered excellent work, and rose up to the occasion on many circumstances to fill any gap we had, and deliver high quality code while meeting our deadlines. \n\n He is great to collaborate with, a fast learner, and was greatly appreciated by all of his teammates. \n\n I highly recommend Daniel!",
         "source": "Linkedin",
         "sourceUrl": "https://www.linkedin.com/in/daniel-ishigaki"
@@ -41,26 +41,31 @@
       {
         "title": "Weebox",
         "description": "A highly interactive NFT store for anime and manga, built around a storytelling experience. I was responsible for the frontend implementation of a Gacha machine feature, as well as all page animations and structural development.",
+        "thumbnailUrl":"https://picsum.photos/600/400",
         "coverImageUrl": "https://picsum.photos/600/400"
       },
       {
         "title": "SFT Studios",
         "description": "As the umbrella institution for all projects, SFT Studios required a robust online presence. I built its page from scratch, taking full ownership of the development, deployment, and maintenance.",
-        "coverImageUrl": "https://picsum.photos/600/400"
+        "thumbnailUrl": "https://picsum.photos/600/400",
+        "coverImageUrl": "https://storage.googleapis.com/assets.danielvichi.com/previous_projects_sft.webp"
       },
       {
         "title": "Anime ID",
         "description": "Anime ID is a platform for anime and manga fans to connect and create an identity rooted in their fan assets. I contributed to the first version of the client dashboard, handling Frontend development while also delivering complete Backend features.",
+        "thumbnailUrl":"https://picsum.photos/600/400",
         "coverImageUrl": "https://picsum.photos/600/400"
       },
       {
         "title": "Maru Project",
         "description": "Maru was a campaign by the Japanese band Gesu no Kiwami Otome, created to share band news alongside the release of an exclusive new single. The single was transformed into NFT art featuring fragments of the songs, all showcased on a dedicated landing page. I contributed to the majority of the project, developing the NFT animations, processing NFT assetsm building the landing page, and integrating PayPal. Additionally, special NFTs included an exclusive physical LP featuring the NFT art and song.",
+        "thumbnailUrl":"https://picsum.photos/600/400",
         "coverImageUrl": "https://picsum.photos/600/400"
       },
       {
         "title": "KLKTN",
         "description": "KLKTN was a Kickstarter project that combined an institutional presence with an NFT store and showcase for K-pop and independent musicians. The platform featured a fresh design by a fashion-industry designer, giving it a strong and distinctive identity. I contributed by developing Frontend components and automating asset processing through batch scripts.",
+        "thumbnailUrl":"https://picsum.photos/600/400",
         "coverImageUrl": "https://picsum.photos/600/400"
       }
     ],
@@ -82,22 +87,25 @@
         "React Three Fiber (3D)",
         "Sentry",
         "Google Tag Manager",
-        "CSP (Content Security Policy)"
+        "CSP (Content Security Policy)",
+        "Jest",
+        "Webpack",
+        "TurboPack"
       ],
       "back-end": [
         "Node.js",
         "Prisma ORM",
         "Nest.Js",
-        "REST API"
+        "REST API",
+        "Jest",
+        "Webpack",
+        "TurboPack"
       ],
       "dev-ops": [
         "Google GCP",
         "Docker",
         "Git",
-        "CI/DI",
-        "Jest",
-        "Webpack",
-        "TurboPack"
+        "CI/DI"
       ],
       "web3": [
         "WAGMI",
@@ -106,8 +114,8 @@
         "Dynamic"
       ],
       "others": [
-        "Paypal",
-        "Stripe"
+        "Paypal Api",
+        "Stripe Api"
       ]
     }
   },
@@ -163,21 +171,22 @@
         "React Spring",
         "StoryBook",
         "Google Tag Manager",
-        "CSP (Content Security Policy)"
+        "CSP (Content Security Policy)",
+        "Jest",
+        "Webpack"
       ],
       "back-end": [
         "Node.js",
         "Prisma ORM",
         "Nest.Js",
-        "REST API"
+        "REST API",
+        "Jest"
       ],
       "dev-ops": [
         "Google GCP",
         "Docker",
         "Git",
-        "CI/DI",
-        "Jest",
-        "Webpack"
+        "CI/DI"
       ]
     }
   },
