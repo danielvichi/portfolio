@@ -5,6 +5,15 @@
 import "./src/env.js";
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+  output: "standalone",
+  images: {
+    domains: ["storage.googleapis.com"],
+  },
+  i18n: {
+    locales: ["en", "pt"],
+    defaultLocale: "en",
+  },
+};
 
 export default config;
