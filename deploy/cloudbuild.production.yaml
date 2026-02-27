@@ -9,15 +9,15 @@ steps:
       [
         "build",
         "-t",
-        "us-west1-docker.pkg.dev/danielvichi/danielvichi-production:$COMMIT_SHA",
-        "--build-arg=BUILD_PROD=0",
+        "us-west1-docker.pkg.dev/danielvichi/danielvichi-production:latest",
+        "--build-arg=BUILD_PROD=1",
         ".",
       ]
     env:
   # Push the container image to Container Registry
   - id: docker-push
     name: "gcr.io/cloud-builders/docker"
-    args: ["push", "us-west1-docker.pkg.dev/danielvichi/danielvichi-production:$COMMIT_SHA"]
+    args: ["push", "us-west1-docker.pkg.dev/danielvichi/danielvichi-production:latest"]
   # Deploy container image to Cloud Run
   - name: "gcr.io/google.com/cloudsdktool/cloud-sdk"
     entrypoint: gcloud
@@ -27,7 +27,7 @@ steps:
         "deploy",
         "danielvichi-production",
         "--image",
-        "us-west1-docker.pkg.dev/danielvichi/danielvichi-production:$COMMIT_SHA",
+        "us-west1-docker.pkg.dev/danielvichi/danielvichi-production:latest",
         "--region",
         "us-west1",
         "--port=3000",
