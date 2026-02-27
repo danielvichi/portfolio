@@ -41,26 +41,31 @@
       {
         "title": "Weebox",
         "description": "A highly interactive NFT store for anime and manga, built around a storytelling experience. I was responsible for the frontend implementation of a Gacha machine feature, as well as all page animations and structural development.",
+        "thumbnailUrl":"https://picsum.photos/600/400",
         "coverImageUrl": "https://picsum.photos/600/400"
       },
       {
         "title": "SFT Studios",
         "description": "As the umbrella institution for all projects, SFT Studios required a robust online presence. I built its page from scratch, taking full ownership of the development, deployment, and maintenance.",
-        "coverImageUrl": "https://picsum.photos/600/400"
+        "thumbnailUrl": "https://picsum.photos/600/400",
+        "coverImageUrl": "https://storage.googleapis.com/assets.danielvichi.com/previous_projects_sft.webp"
       },
       {
         "title": "Anime ID",
         "description": "Anime ID is a platform for anime and manga fans to connect and create an identity rooted in their fan assets. I contributed to the first version of the client dashboard, handling Frontend development while also delivering complete Backend features.",
+        "thumbnailUrl":"https://picsum.photos/600/400",
         "coverImageUrl": "https://picsum.photos/600/400"
       },
       {
         "title": "Maru Project",
         "description": "Maru was a campaign by the Japanese band Gesu no Kiwami Otome, created to share band news alongside the release of an exclusive new single. The single was transformed into NFT art featuring fragments of the songs, all showcased on a dedicated landing page. I contributed to the majority of the project, developing the NFT animations, processing NFT assetsm building the landing page, and integrating PayPal. Additionally, special NFTs included an exclusive physical LP featuring the NFT art and song.",
+        "thumbnailUrl":"https://picsum.photos/600/400",
         "coverImageUrl": "https://picsum.photos/600/400"
       },
       {
         "title": "KLKTN",
         "description": "KLKTN was a Kickstarter project that combined an institutional presence with an NFT store and showcase for K-pop and independent musicians. The platform featured a fresh design by a fashion-industry designer, giving it a strong and distinctive identity. I contributed by developing Frontend components and automating asset processing through batch scripts.",
+        "thumbnailUrl":"https://picsum.photos/600/400",
         "coverImageUrl": "https://picsum.photos/600/400"
       }
     ],
@@ -82,22 +87,25 @@
         "React Three Fiber (3D)",
         "Sentry",
         "Google Tag Manager",
-        "CSP (Content Security Policy)"
+        "CSP (Content Security Policy)",
+        "Jest",
+        "Webpack",
+        "TurboPack"
       ],
       "back-end": [
         "Node.js",
         "Prisma ORM",
         "Nest.Js",
-        "REST API"
+        "REST API",
+        "Jest",
+        "Webpack",
+        "TurboPack"
       ],
       "dev-ops": [
         "Google GCP",
         "Docker",
         "Git",
-        "CI/DI",
-        "Jest",
-        "Webpack",
-        "TurboPack"
+        "CI/DI"
       ],
       "web3": [
         "WAGMI",
@@ -163,21 +171,22 @@
         "React Spring",
         "StoryBook",
         "Google Tag Manager",
-        "CSP (Content Security Policy)"
+        "CSP (Content Security Policy)",
+        "Jest",
+        "Webpack"
       ],
       "back-end": [
         "Node.js",
         "Prisma ORM",
         "Nest.Js",
-        "REST API"
+        "REST API",
+        "Jest"
       ],
       "dev-ops": [
         "Google GCP",
         "Docker",
         "Git",
-        "CI/DI",
-        "Jest",
-        "Webpack"
+        "CI/DI"
       ]
     }
   },
