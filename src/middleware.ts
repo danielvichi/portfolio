@@ -1,7 +1,7 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { DEFAULT_LANGUAGE, SUPPORTED_LANGUAGES } from "./config/lang";
 import Negotiator from "negotiator";
-import { match } from '@formatjs/intl-localematcher'
+import { match } from "@formatjs/intl-localematcher";
 
 function getLocale(request: NextRequest): string {
   if (!DEFAULT_LANGUAGE) {
@@ -32,32 +32,36 @@ function getLocale(request: NextRequest): string {
 }
 
 export function middleware(request: NextRequest) {
-  const pathname = request.nextUrl.pathname
+  const pathname = request.nextUrl.pathname;
 
   // Skip if pathname already has a language
-  if (SUPPORTED_LANGUAGES.some(lang => pathname.startsWith(`/${lang}/`) || pathname === `/${lang}`)) {
-    return NextResponse.next()
+  if (
+    SUPPORTED_LANGUAGES.some(
+      (lang) => pathname.startsWith(`/${lang}/`) || pathname === `/${lang}`,
+    )
+  ) {
+    return NextResponse.next();
   }
 
   // Get preferred locale
-  const locale = getLocale(request)
+  const locale = getLocale(request);
 
   // Create new URL with locale
-  const newUrl = new URL(`/${locale}${pathname}`, request.url)
-  
+  const newUrl = new URL(`/${locale}${pathname}`, request.url);
+
   // Preserve search params
-  newUrl.search = request.nextUrl.search
+  newUrl.search = request.nextUrl.search;
 
   // Redirect with cookie
-  const response = NextResponse.redirect(newUrl)
-  response.cookies.set('NEXT_LOCALE', locale, {
+  const response = NextResponse.redirect(newUrl);
+  response.cookies.set("NEXT_LOCALE", locale, {
     maxAge: 60 * 60 * 24 * 365, // 1 year
-    path: '/',
-  })
-  
-  return response
+    path: "/",
+  });
+
+  return response;
 }
 
 export const config = {
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
-}
+  matcher: ["/((?!api|_next/static|_next/image|favicon.ico).*)"],
+};
