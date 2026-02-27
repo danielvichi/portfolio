@@ -15,16 +15,16 @@
     "content": [
       {
         "name": "Ervin Mamutov",
-        "role": "Senior Software Engineer co-worker em KLKTN",
-        "profilePictureUrl": "https://picsum.photos/400/400",
+        "role": "Engenheiro de Software Senior co-worker em KLKTN / SanFran Tokyo",
+        "profilePictureUrl": "https://storage.googleapis.com/assets.danielvichi.com/recommendation_pp_em01.jpg",
         "comment": "Daniel é um das pessoas mais talentosas e dedicadas com quem já trabalhei. Ver sua evolução de designer gráfico para um engenheiro altamente qualificado em apenas três anos foi incrível. Isso realmente mostra sua disciplina, trabalho duro e talento natural. \n\n O que realmente diferencia Daniel é sua abordagem ao trabalho em equipe. Ele é sempre o primeiro a se voluntariar, independentemente da tarefa, e entrega consistentemente soluções pensativas, precisas e bem elaboradas. Ele tem um ótimo senso para garantir que seu trabalho seja user-friendly e robusto. Além disso, ele traz tanta positividade e energia para a equipe - é impossível exagerar o quanto ele melhora o ambiente de trabalho. \n\n Qualquer equipe teria sorte de ter Daniel. Ele não é apenas talentoso; ele é o tipo de colega de equipe que torna todos ao seu redor melhores. \n\n - Traduzido do Inglês",
         "source": "Linkedin",
         "sourceUrl": "https://www.linkedin.com/in/daniel-ishigaki"
       },
       {
         "name": "Fabien Allanic",
-        "role": "Engineering leader - CTO em, KLKTN",
-        "profilePictureUrl": "https://picsum.photos/400/400",
+        "role": "Engenheiro Líder, CTO em KLKTN / SanFran Tokyo",
+        "profilePictureUrl": "https://storage.googleapis.com/assets.danielvichi.com/recommendation_pp_fa01.jpg",
         "comment": "Eu tive o prazer de gerenciar o Daniel por alguns anos na KLKTN. \n\n O Daniel não é apenas talentoso e bom no que faz, mas também incorpora o que eu adoro ver em cada engenheiro: ser proativo com as coisas, liderar pelo exemplo, estar disposto a aprender e crescer, e estar sempre pronto para um desafio. \n\n Ele entregou um trabalho excelente, e se destacou em muitas circunstâncias para preencher qualquer lacuna que tivéssemos, e entregar código de alta qualidade enquanto cumpria nossos prazos. \n\n Ele é ótimo para colaborar, um aprendiz rápido, e foi muito apreciado por todos os seus colegas de equipe. \n\n Eu recomendo muito o Daniel! \n\n - Traduzido do Inglês",
         "source": "Linkedin",
         "sourceUrl": "https://www.linkedin.com/in/daniel-ishigaki"
@@ -41,26 +41,31 @@
       {
         "title": "Weebox",
         "description": "Uma loja NFT altamente interativa de anime e mangá, construída em torno de uma experiência de storytelling. Fui responsável pela implementação do frontend de um recurso de máquina de Gacha, bem como por todas as animações das páginas e pelo desenvolvimento estrutural.",
+        "thumbnailUrl":"https://picsum.photos/600/400",
         "coverImageUrl": "https://picsum.photos/600/400"
       },
       {
         "title": "SFT Studios",
         "description": "Como instituição guarda-chuva de todos os projetos, a SFT Studios exigia uma presença online robusta. Construí sua página do zero, assumindo total responsabilidade pelo desenvolvimento, implantação e manutenção.",
+        "thumbnailUrl":"https://picsum.photos/600/400",
         "coverImageUrl": "https://storage.googleapis.com/assets.danielvichi.com/previous_projects_sft.webp"
       },
       {
         "title": "Anime ID",
         "description": "O Anime ID é uma plataforma para fãs de anime e mangá se conectarem e criarem uma identidade enraizada em seus ativos de fã. Contribuí para a primeira versão do dashboard do cliente, cuidando do desenvolvimento Frontend e também entregando funcionalidades completas no Backend.",
+        "thumbnailUrl":"https://picsum.photos/600/400",
         "coverImageUrl": "https://picsum.photos/600/400"
       },
       {
         "title": "Maru Project",
         "description": "Maru foi uma campanha da banda japonesa Gesu no Kiwami Otome, criada paradivulgar novidades da banda junto com o lançamento de um single novo e exclusivo. O single foi transformado em arte NFT com fragmentos das músicas, tudo apresentado em uma landing page dedicada. Contribuí para a maior parte do projeto, desenvolvendo as animações dos NFTs, processando os assets dos NFTs, construindo a landing page e integrando o PayPal. Além disso, NFTs especiais incluíam um LP físico exclusivo com a arte do NFT e a música.",
+        "thumbnailUrl":"https://picsum.photos/600/400",
         "coverImageUrl": "https://picsum.photos/600/400"
       },
       {
         "title": "KLKTN",
         "description": "O KLKTN foi um projeto do Kickstarter que combinava uma presença institucional com uma loja e vitrine de NFTs para músicos de K-pop e independentes. A plataforma contava com um design inovador criado por um designer da indústria da moda, conferindo-lhe uma identidade forte e diferenciada. Contribuí desenvolvendo componentes de Frontend e automatizando o processamento de assets por meio de scripts",
+        "thumbnailUrl":"https://picsum.photos/600/400",
         "coverImageUrl": "https://picsum.photos/600/400"
       }
     ],
@@ -107,8 +112,8 @@
         "Dynamic"
       ],
       "others": [
-        "Paypal",
-        "Stripe"
+        "Paypal Api",
+        "Stripe Api"
       ]
     }
   },
