@@ -1,11 +1,12 @@
 import Markdown from "react-markdown";
+import ExternalLink from "~/app/_components/external-link";
 import ChevronRight from "~/app/_icons/chevron-right";
 
 export interface ProjectCardProps {
   title: string;
   description: string;
   projectUrl?: string;
-  coverImageUrl?: string;
+  projImgs?: string[];
   thumbnailUrl?: string;
 }
 
@@ -42,22 +43,43 @@ function DevBackground() {
 }
 
 export default function ProjectCard(props: ProjectCardProps) {
-  const { title, description, coverImageUrl, projectUrl } = props;
+  const { title, description, projImgs, projectUrl } = props;
+
+  const projectImgList = projImgs?.map((imgUrl, index) => (
+    <img
+      key={index}
+      src={imgUrl}
+      alt={`${title} project sample image ${index + 1}`}
+    />
+  ));
+
   return (
     <div className="bg-background-secondary relative flex max-h-[70vh] w-full min-w-[300px] flex-col gap-4 overflow-y-scroll border border-gray-500 p-4">
       <div className="absolute top-0 right-0 h-[150px] w-[300px] opacity-50">
         <DevBackground />
       </div>
+
       <h5 className="bg-accent-tertiary relative w-fit px-2 py-0.5 text-2xl">
         {title}
       </h5>
-      <div className="flex flex-col gap-8 p-4 px-8 md:px-16">
-        <Markdown>{description}</Markdown>
-        {coverImageUrl ? (
-          <img src={coverImageUrl} alt={`${title} project sample image`} />
-        ) : (
-          ""
-        )}
+
+      <div className="relative grid grid-cols-1 md:grid-cols-5 gap-8 p-4 px-8 md:px-16">
+        <div className="col-span-2 flex flex-col gap-4">
+          <Markdown>{description}</Markdown>
+
+          {projectUrl && (
+            <ExternalLink
+              href={projectUrl}
+              className="text-accent-primary mt-4 inline-flex items-center gap-1 text-sm"
+            >
+              {projectUrl}
+            </ExternalLink>
+          )}
+        </div>
+
+        <div className="col-span-3 flex flex-col gap-4">
+          {projImgs && projImgs.length > 0 ? projectImgList : ""}
+        </div>
       </div>
     </div>
   );

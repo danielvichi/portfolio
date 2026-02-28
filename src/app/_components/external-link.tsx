@@ -9,6 +9,7 @@ const ExternalLink = forwardRef<
   return (
     <a
       className={`group hover:text-accent-primary flex w-fit flex-row items-center gap-1.5 transition-all hover:underline ${className}`}
+      target="_blank"
       ref={ref}
       {...rest}
     >

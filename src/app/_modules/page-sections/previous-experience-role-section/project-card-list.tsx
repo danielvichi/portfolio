@@ -35,7 +35,8 @@ export default function ProjectCardList({ projectList }: ProjectCardListProps) {
       key={project.title}
       title={project.title}
       description={project.description}
-      coverImageUrl={project.coverImageUrl}
+      projectUrl={project.projectUrl}
+      projImgs={project.projImgs}
     />
   ));
 
