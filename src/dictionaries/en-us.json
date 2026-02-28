@@ -35,12 +35,12 @@
     "title": "Last Experience",
     "sub_title": "KLKTN LTDA / SanFran Tokyo",
     "duration": "from 2021 to 2024",
-    "description": "KLKTN as it began was music Web3 startup that pivoted to become SanFran Tokyo, an anime and manga Web3 company. Throughout this journey, I collaborated on various projects where I applied my UI expertise to streamline and polish frontend implementations. While focused on full-time Frontend development, I frequently contributed to Backend tasks when needed to unblock progress and enhance team efficiency.",
+    "description": "KLKTN as it began was music Web3 startup that pivoted to become SanFran Tokyo, an anime and manga Web3 company. Throughout this journey, I collaborated on various projects where I applied my **UI expertise** to streamline and polish frontend implementations. While focused on full-time **Frontend development**, I frequently contributed to **Backend** tasks when needed to unblock progress and enhance team efficiency.",
     "projects_title": "Projects Highlights",
     "projects": [
       {
         "title": "Weebox",
-        "description": "A highly interactive NFT store for anime and manga, built around a storytelling experience. I was responsible for the frontend implementation of a Gacha machine feature, as well as all page animations and structural development.",
+        "description": "A highly interactive NFT store for anime and manga, built around a storytelling experience. I was responsible for the **Frontend** implementation of a Gacha machine feature, as well as all page **animations** and **structural development**.",
         "projectUrl": "https://weebox.io/",
         "thumbnailUrl": "https://storage.googleapis.com/assets.danielvichi.com/projects/wbx-001-thumbnail.webp",
         "projImgs": [
@@ -52,7 +52,7 @@
       },
       {
         "title": "SFT Studios",
-        "description": "As the umbrella institution for all projects, SFT Studios required a robust online presence. I built its page from scratch, taking full ownership of the development, deployment, and maintenance.",
+        "description": "As the umbrella institution for all projects, SFT Studios required a robust online presence. I built its page from **scratch**, taking full **ownership** of the development, deployment, and maintenance.",
         "projectUrl": "https://sftstudios.xyz/",
         "thumbnailUrl": "https://storage.googleapis.com/assets.danielvichi.com/projects/sft-001-thumbnail.webp",
         "projImgs": [
@@ -61,13 +61,13 @@
       },
       {
         "title": "Anime ID",
-        "description": "Anime ID is a platform for anime and manga fans to connect and create an identity rooted in their fan assets. I contributed to the first version of the client dashboard, handling Frontend development while also delivering complete Backend features.",
+        "description": "Anime ID is a platform for anime and manga fans to connect and create an identity rooted in their fan assets. I contributed to the first version of the client dashboard, handling **Frontend** development while also delivering complete **Backend** features.",
         "thumbnailUrl": "",
         "projImgs": []
       },
       {
         "title": "Maru Project",
-        "description": "Maru was a campaign by the Japanese band Gesu no Kiwami Otome, created to share band news alongside the release of an exclusive new single. The single was transformed into NFT art featuring fragments of the songs, all showcased on a dedicated landing page. I contributed to the majority of the project, developing the NFT animations, processing NFT assetsm building the landing page, and integrating PayPal. Additionally, special NFTs included an exclusive physical LP featuring the NFT art and song.",
+        "description": "Maru was a campaign by the Japanese band Gesu no Kiwami Otome, created to share band news alongside the release of an exclusive new single. The single was transformed into NFT art featuring fragments of the songs, all showcased on a dedicated landing page. I contributed to the **majority** of the project, developing the NFT **animations**, **processing** NFT assets **building** the landing page, and **integrating** PayPal. Additionally, special NFTs included an exclusive physical LP featuring the NFT art and song.",
         "projectUrl": "https://maru.band/",
         "thumbnailUrl": "https://storage.googleapis.com/assets.danielvichi.com/projects/mb-001-thumbnail.webp",
         "projImgs": [
@@ -77,7 +77,7 @@
       },
       {
         "title": "KLKTN",
-        "description": "KLKTN was a Kickstarter project that combined an institutional presence with an NFT store and showcase for K-pop and independent musicians. The platform featured a fresh design by a fashion-industry designer, giving it a strong and distinctive identity. I contributed by developing Frontend components and automating asset processing through batch scripts.",
+        "description": "KLKTN was a Kickstarter project that combined an institutional presence with an NFT store and showcase for K-pop and independent musicians. The platform featured a fresh design by a fashion-industry designer, giving it a strong and distinctive identity. I contributed by developing **Frontend** components and **automating** asset processing through batch scripts.",
         "projectUrl": "https://klktn.com/",
         "thumbnailUrl": "https://storage.googleapis.com/assets.danielvichi.com/projects/klk-001-thumbnail.webp",
         "projImgs": [
@@ -145,7 +145,7 @@
     "projects": [
       {
         "title": "Software Dashboard",
-        "description": "Designed and Implement a software Dashboard screen with modern standard for better report consumption as way to provide better insights scenarios for clients for existing solution. The project has some technologies restrictions so pure Javascript, Html and CSS (SASS) were utilized to implement this project"
+        "description": "Designed and Implement a software Dashboard screen with modern standard for better report consumption as way to provide better insights scenarios for clients for existing solution. The project has some technologies restrictions so **pure Javascript**, Html and CSS (SASS) were utilized to implement this project"
       },
       {
         "title": "Marketing Tasks",
