@@ -41,32 +41,48 @@
       {
         "title": "Weebox",
         "description": "Uma loja NFT altamente interativa de anime e mangá, construída em torno de uma experiência de storytelling. Fui responsável pela implementação do frontend de um recurso de máquina de Gacha, bem como por todas as animações das páginas e pelo desenvolvimento estrutural.",
-        "thumbnailUrl":"https://picsum.photos/600/400",
-        "coverImageUrl": "https://picsum.photos/600/400"
+        "projectUrl": "https://weebox.io/",
+        "thumbnailUrl": "https://storage.googleapis.com/assets.danielvichi.com/projects/wbx-001-thumbnail.webp",
+        "projImgs": [
+          "https://storage.googleapis.com/assets.danielvichi.com/projects/wbx-001.webp",
+          "https://storage.googleapis.com/assets.danielvichi.com/projects/wbx-002.webp",
+          "https://storage.googleapis.com/assets.danielvichi.com/projects/wbx-003.webp",
+          "https://storage.googleapis.com/assets.danielvichi.com/projects/wbx-004.webp"
+        ]
       },
       {
         "title": "SFT Studios",
         "description": "Como instituição guarda-chuva de todos os projetos, a SFT Studios exigia uma presença online robusta. Construí sua página do zero, assumindo total responsabilidade pelo desenvolvimento, implantação e manutenção.",
-        "thumbnailUrl":"https://picsum.photos/600/400",
-        "coverImageUrl": "https://storage.googleapis.com/assets.danielvichi.com/previous_projects_sft.webp"
+        "projectUrl": "https://sftstudios.xyz/",
+        "thumbnailUrl": "https://storage.googleapis.com/assets.danielvichi.com/projects/sft-001-thumbnail.webp",
+        "projImgs": [
+          "https://storage.googleapis.com/assets.danielvichi.com/projects/sft-001.webp"
+        ]
       },
       {
         "title": "Anime ID",
         "description": "O Anime ID é uma plataforma para fãs de anime e mangá se conectarem e criarem uma identidade enraizada em seus ativos de fã. Contribuí para a primeira versão do dashboard do cliente, cuidando do desenvolvimento Frontend e também entregando funcionalidades completas no Backend.",
-        "thumbnailUrl":"https://picsum.photos/600/400",
-        "coverImageUrl": "https://picsum.photos/600/400"
+        "thumbnailUrl": "",
+        "projImgs": []
       },
       {
         "title": "Maru Project",
         "description": "Maru foi uma campanha da banda japonesa Gesu no Kiwami Otome, criada paradivulgar novidades da banda junto com o lançamento de um single novo e exclusivo. O single foi transformado em arte NFT com fragmentos das músicas, tudo apresentado em uma landing page dedicada. Contribuí para a maior parte do projeto, desenvolvendo as animações dos NFTs, processando os assets dos NFTs, construindo a landing page e integrando o PayPal. Além disso, NFTs especiais incluíam um LP físico exclusivo com a arte do NFT e a música.",
-        "thumbnailUrl":"https://picsum.photos/600/400",
-        "coverImageUrl": "https://picsum.photos/600/400"
+        "projectUrl": "https://maru.band/",
+        "thumbnailUrl": "https://storage.googleapis.com/assets.danielvichi.com/projects/mb-001-thumbnail.webp",
+        "projImgs": [
+          "https://storage.googleapis.com/assets.danielvichi.com/projects/mb-001.webp",
+          "https://storage.googleapis.com/assets.danielvichi.com/projects/mb-002.webp"
+        ]
       },
       {
         "title": "KLKTN",
         "description": "O KLKTN foi um projeto do Kickstarter que combinava uma presença institucional com uma loja e vitrine de NFTs para músicos de K-pop e independentes. A plataforma contava com um design inovador criado por um designer da indústria da moda, conferindo-lhe uma identidade forte e diferenciada. Contribuí desenvolvendo componentes de Frontend e automatizando o processamento de assets por meio de scripts",
-        "thumbnailUrl":"https://picsum.photos/600/400",
-        "coverImageUrl": "https://picsum.photos/600/400"
+        "projectUrl": "https://klktn.com/",
+          "projImgs": [
+          "https://storage.googleapis.com/assets.danielvichi.com/projects/klk-001.webp",
+          "https://storage.googleapis.com/assets.danielvichi.com/projects/klk-002.webp"
+        ]
       }
     ],
     "tech_stack_title": "Tecnologias e ferramentas utilizadas",
