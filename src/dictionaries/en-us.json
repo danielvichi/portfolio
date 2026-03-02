@@ -227,7 +227,10 @@
     "description": "Subscribe for a follow up or send me Hi at"
   },
   "footer": {
+    "title": "Daniel (Vichi) Ishigaki",
     "rights": "All rights reserved",
-    "resume": "Resume"
+    "resume": "Resume",
+    "resume_url": "https://storage.googleapis.com/assets.danielvichi.com/files/Daniel%20Ishigaki%20-%20Resume.pdf",
+    "vichi": "Why Vichi? \n\n Vichi is a nickname from early digital presence on games and chat servers, most friends and co-workers know me as Vichi, so I decided to use it as my domain and brand name for this portfolio."
   }
 }

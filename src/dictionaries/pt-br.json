@@ -79,7 +79,7 @@
         "title": "KLKTN",
         "description": "O KLKTN foi um projeto do Kickstarter que combinava uma presença institucional com uma loja e vitrine de NFTs para músicos de K-pop e independentes. A plataforma contava com um design inovador criado por um designer da indústria da moda, conferindo-lhe uma identidade forte e diferenciada. Contribuí desenvolvendo componentes de **Frontend** e **automatizando** o processamento de assets por meio de scripts",
         "projectUrl": "https://klktn.com/",
-          "projImgs": [
+        "projImgs": [
           "https://storage.googleapis.com/assets.danielvichi.com/projects/klk-001.webp",
           "https://storage.googleapis.com/assets.danielvichi.com/projects/klk-002.webp"
         ]
@@ -224,7 +224,10 @@
     "description": "Deixe seu email para que eu entre em contato ou me mande um Alô em:"
   },
   "footer": {
-    "rights": "All rights reserved",
-    "resume": "Curriculum"
+    "title": "Daniel (Vichi) Ishigaki",
+    "rights": "Todos os direitos reservados",
+    "resume": "Curriculum",
+    "resume_url": "https://storage.googleapis.com/assets.danielvichi.com/files/Daniel%20Ishigaki%20-%20Curriculum.pdf",
+    "vichi": "Por que Vichi? \n\n Vichi é um apelido para presença digital em jogos e servidores de chat, muitos amigos e colegas de trabalho me conhecem como Vichi, então decidi usá-lo como meu domínio e nome de marca para este portfólio."
   }
 }
