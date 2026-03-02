@@ -70,7 +70,7 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
           <Footer
             fields={{
               ...dict.footer,
-              subTitle: dict.hero.sub_title,
+              sub_title: dict.hero.sub_title,
             }}
           />
         </>
