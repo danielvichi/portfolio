@@ -67,7 +67,12 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
             title={dict.contact.title}
             description={dict.contact.description}
           />
-          <Footer />
+          <Footer
+            fields={{
+              ...dict.footer,
+              subTitle: dict.hero.sub_title,
+            }}
+          />
         </>
       </ModalProvider>
     </main>
