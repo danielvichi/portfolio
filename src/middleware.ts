@@ -34,32 +34,13 @@ function getLocale(request: NextRequest): string {
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
 
-  // Skip if pathname already has a language
-  if (
-    SUPPORTED_LANGUAGES.some(
-      (lang) => pathname.startsWith(`/${lang}/`) || pathname === `/${lang}`,
-    )
-  ) {
-    return NextResponse.next();
+  if (pathname === "/") {
+    const locale = getLocale(request);
+    const newUrl = new URL(`/${locale}`, request.url);
+    return NextResponse.redirect(newUrl);
   }
 
-  // Get preferred locale
-  const locale = getLocale(request);
-
-  // Create new URL with locale
-  const newUrl = new URL(`/${locale}${pathname}`, request.url);
-
-  // Preserve search params
-  newUrl.search = request.nextUrl.search;
-
-  // Redirect with cookie
-  const response = NextResponse.redirect(newUrl);
-  response.cookies.set("NEXT_LOCALE", locale, {
-    maxAge: 60 * 60 * 24 * 365, // 1 year
-    path: "/",
-  });
-
-  return response;
+  return NextResponse.next();
 }
 
 export const config = {
