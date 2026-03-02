@@ -27,7 +27,7 @@ export default function HeroSection(props: HeroSectionProps) {
       </div>
 
       <div className="flex w-full justify-center">
-        <div className="relative h-[500px] w-full md:w-[500px] lg:w-[600px]">
+        <div className="relative h-[500px] w-full md:w-[500px] lg:w-[600px] hover:cursor-move">
           <LogoScene />
         </div>
       </div>

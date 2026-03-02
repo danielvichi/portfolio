@@ -50,7 +50,7 @@ export default function LogoScene() {
       </Suspense>
 
       {/* Controls to orbit around the model */}
-      <OrbitControls enablePan={false} enableZoom={false} enableRotate={true} />
+      <OrbitControls enablePan={false} enableZoom={false} enableRotate={true} autoRotate={true} autoRotateSpeed={1} />
 
       {/* Optional grid and axes helpers */}
       {/* <gridHelper args={[10, 10]} /> */}
