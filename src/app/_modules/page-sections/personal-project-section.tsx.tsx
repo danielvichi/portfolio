@@ -6,28 +6,35 @@ import ExternalLink from "~/app/_components/external-link";
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import ContentWrapper from "~/app/_components/content-wrapper";
 
-interface PersonalProjectSectionProps {
+interface PersonalProjectSectionFields {
   title: string;
-  subTitle: string;
+  sub_title: string;
   description: string;
-  githubTitle: string;
-  techStackTitle: string;
-  techStack: TechStack;
+  github_title: string;
+  tech_stack_title: string;
+  tech_stack: TechStack;
+}
+interface PersonalProjectSectionProps {
+  fields: PersonalProjectSectionFields;
 }
 
-export default function PersonalProjectSection({
-  title,
-  subTitle,
-  description,
-  githubTitle,
-  techStackTitle,
-  techStack,
-}: PersonalProjectSectionProps) {
+export default function PersonalProjectSection(
+  props: PersonalProjectSectionProps,
+) {
+  const {
+    title,
+    sub_title,
+    description,
+    github_title,
+    tech_stack_title,
+    tech_stack,
+  } = props.fields;
+
   return (
     <ContainerScreen className="flex flex-col gap-4">
       <SectionTitle.h2>{title}</SectionTitle.h2>
       <ContentWrapper>
-        <SectionTitle.h3>{subTitle}</SectionTitle.h3>
+        <SectionTitle.h3>{sub_title}</SectionTitle.h3>
         <Markdown>{description}</Markdown>
       </ContentWrapper>
 
@@ -38,7 +45,7 @@ export default function PersonalProjectSection({
             <GitHubLogoIcon className="text-accent-tertiary h-[30px] w-[30px]" />
           }
         >
-          {githubTitle}
+          {github_title}
         </SectionTitle.h4>
         <ExternalLink href="https://github.com/danielvichi/espera-queue-fe">
           Front-end Github
@@ -50,8 +57,8 @@ export default function PersonalProjectSection({
       </ContentWrapper>
 
       <ContentWrapper>
-        <SectionTitle.h4>{techStackTitle}</SectionTitle.h4>
-        <TechStackTags techStack={techStack} />
+        <SectionTitle.h4>{tech_stack_title}</SectionTitle.h4>
+        <TechStackTags techStack={tech_stack} />
       </ContentWrapper>
     </ContainerScreen>
   );

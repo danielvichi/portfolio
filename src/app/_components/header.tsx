@@ -3,8 +3,12 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import LanguageSelector from "./language-selector";
 import * as Tooltip from "@radix-ui/react-tooltip";
 
+interface HeaderFields {
+  github_tooltip: string;
+}
+
 interface HeaderProps {
-  content: Record<string, string>;
+  fields: HeaderFields;
 }
 
 function GitHubExternalLinkWithToolTip({
@@ -36,15 +40,13 @@ function GitHubExternalLinkWithToolTip({
 }
 
 export default function Header(props: HeaderProps) {
-  const { content } = props;
+  const { github_tooltip } = props.fields;
   return (
     <div className="bg-background-primary fixed top-0 right-0 left-0 z-40 border-b border-gray-500 px-4">
       <div className="relative container m-auto flex flex-row items-center justify-between">
         <h1 className="text-accent-primary"> Daniel Ishigaki</h1>
         <div className="flex flex-row items-center gap-4">
-          <GitHubExternalLinkWithToolTip
-            tooltipString={content.github_tooltip ?? ""}
-          />
+          <GitHubExternalLinkWithToolTip tooltipString={github_tooltip ?? ""} />
           <LanguageSelector />
         </div>
       </div>

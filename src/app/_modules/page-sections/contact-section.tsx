@@ -3,17 +3,20 @@ import ContainerScreen from "../../_components/container-screen";
 import SectionTitle from "../../_components/titles";
 import Markdown from "react-markdown";
 
-interface ContactSectionProps {
+interface ContactSectionFields {
   title: string;
   description: string;
 }
 
-export default function ContactSection({
-  title,
-  description,
-}: ContactSectionProps) {
+interface ContactSectionProps {
+  fields: ContactSectionFields;
+}
+
+export default function ContactSection(props: ContactSectionProps) {
+  const { title, description } = props.fields;
+
   return (
-    <ContainerScreen className="px-4 py-24 flex flex-col gap-8">
+    <ContainerScreen className="flex flex-col gap-8 px-4 py-24">
       <SectionTitle.h2>{title}</SectionTitle.h2>
 
       <ContentWrapper className="flex flex-col items-center gap-4">
