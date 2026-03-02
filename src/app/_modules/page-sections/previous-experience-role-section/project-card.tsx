@@ -28,15 +28,21 @@ function DevIcon() {
   return (
     <>
       <ChevronRight className="stroke-accent-tertiary h-2/3 rotate-180 fill-none stroke-3" />
-      <div className="border-accent-tertiary mx-5 h-[110px] w-[15px] rotate-30 border-[1.5px]" />
+      <div className="border-accent-tertiary -mx-[20px] h-[20px] w-[20px] rounded-full border-[1.5px]" />
       <ChevronRight className="stroke-accent-tertiary h-2/3 fill-none stroke-3" />
     </>
   );
 }
 
-function DevBackground() {
+type DevBackgroundProps = React.HTMLAttributes<HTMLDivElement>;
+
+function DevBackground(props: DevBackgroundProps) {
+  const { className, ...rest } = props;
   return (
-    <div className="absolute inset-[2px] flex items-center justify-end brightness-50 transition-all group-hover:scale-110">
+    <div
+      className={`absolute inset-[2px] flex items-center justify-end brightness-50 transition-all group-hover:scale-110 ${className}`}
+      {...rest}
+    >
       <DevIcon />
     </div>
   );
@@ -54,16 +60,12 @@ export default function ProjectCard(props: ProjectCardProps) {
   ));
 
   return (
-    <div className="bg-background-secondary relative flex max-h-[70vh] w-full min-w-[300px] flex-col gap-4 overflow-y-scroll border border-gray-500 p-4">
-      <div className="absolute top-0 right-0 h-[150px] w-[300px] opacity-50">
-        <DevBackground />
-      </div>
-
+    <div className="bg-background-secondary relative flex max-h-[70vh] w-full min-w-[300px] flex-col gap-4 overflow-x-hidden overflow-y-scroll border border-gray-500 p-4">
       <h5 className="bg-accent-tertiary relative w-fit px-2 py-0.5 text-2xl">
         {title}
       </h5>
 
-      <div className="relative grid grid-cols-1 md:grid-cols-5 gap-8 p-4 px-8 md:px-16">
+      <div className="relative grid grid-cols-1 gap-8 p-4 px-8 md:grid-cols-5 md:px-16">
         <div className="col-span-2 flex flex-col gap-4">
           <Markdown>{description}</Markdown>
 
@@ -77,7 +79,10 @@ export default function ProjectCard(props: ProjectCardProps) {
           )}
         </div>
 
-        <div className="col-span-3 flex flex-col gap-4">
+        <div className="relative col-span-3 flex flex-col gap-4">
+          <div className="hidden md:flex absolute top-[50px] left-1/2 h-[150px] w-[300px] -translate-x-3/4 opacity-50">
+            <DevBackground className="scale-200" />
+          </div>
           {projImgs && projImgs.length > 0 ? projectImgList : ""}
         </div>
       </div>
