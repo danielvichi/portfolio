@@ -5,12 +5,17 @@ import Markdown from "react-markdown";
 import { FaceIcon } from "@radix-ui/react-icons";
 import ContentWrapper from "~/app/_components/content-wrapper";
 
-interface AboutSectionProps {
+interface AboutSectionFields {
   title: string;
   content: string;
 }
+interface AboutSectionProps {
+  fields: AboutSectionFields;
+}
 
-export default function AboutSection({ title, content }: AboutSectionProps) {
+export default function AboutSection(props: AboutSectionProps) {
+  const { title, content } = props.fields;
+  
   return (
     <ContainerScreen className="flex flex-col gap-8 px-4 py-24">
       <SectionTitle.h2

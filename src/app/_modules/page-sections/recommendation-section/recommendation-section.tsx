@@ -8,15 +8,19 @@ import EndorseCard, { type EndorseCardProps } from "./recommendation-card";
 import { useModalContext } from "~/app/_contexts/modal-context";
 import Carrousel from "~/app/_components/carrousel";
 
-interface RecommendationSectionProps {
+interface RecommendationSectionFields {
   title: string;
   content: EndorseCardProps[];
 }
 
-export default function RecommendationSection({
-  title,
-  content,
-}: RecommendationSectionProps) {
+interface RecommendationSectionProps {
+  fields: RecommendationSectionFields;
+}
+
+export default function RecommendationSection(
+  props: RecommendationSectionProps,
+) {
+  const { title, content } = props.fields;
   const { isOpen, setIsOpen, setModalContent } = useModalContext();
 
   function handleCardClick(
@@ -70,7 +74,9 @@ export default function RecommendationSection({
         <Markdown>{title}</Markdown>
       </SectionTitle.h2>
 
-      <div className="w-full grid grid-cols-1 md:grid-cols-2 gap-4">{recommendationThumbnailList}</div>
+      <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2">
+        {recommendationThumbnailList}
+      </div>
     </ContainerScreen>
   );
 }

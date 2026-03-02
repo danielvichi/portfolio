@@ -2,20 +2,23 @@ import Markdown from "react-markdown";
 import type { ProjectCardProps } from "./project-card";
 import ProjectCardList from "./project-card-list";
 import type { TechStack } from "../../tech-stack-tags";
-import TechStackTags from "../../tech-stack-tags";
+import Tech_stackTags from "../../tech-stack-tags";
 import ContainerScreen from "~/app/_components/container-screen";
 import SectionTitle from "~/app/_components/titles";
 import ContentWrapper from "~/app/_components/content-wrapper";
 
-interface PreviousExperienceRoleSectionProps {
+interface PreviousExperienceRoleSectionFields {
   title: string;
-  subTitle: string;
+  sub_title: string;
   duration: string;
   description: string;
-  projectsTitle: string;
+  projects_title: string;
   projects: ProjectCardProps[];
-  techStackTitle: string;
-  techStack?: TechStack;
+  tech_stack_title: string;
+  tech_stack?: TechStack;
+}
+interface PreviousExperienceRoleSectionProps {
+  fields: PreviousExperienceRoleSectionFields;
 }
 
 interface DescriptionSectionProps {
@@ -58,16 +61,16 @@ function ProjectsSection({ title, projectsList }: ProjectsSectionProps) {
   );
 }
 
-interface TechStackSectionProps {
+interface Tech_stackSectionProps {
   title: string;
-  techStack: TechStack;
+  tech_stack: TechStack;
 }
 
-function TechStackSection({ title, techStack }: TechStackSectionProps) {
+function Tech_stackSection({ title, tech_stack }: Tech_stackSectionProps) {
   return (
     <ContentWrapper>
       <SectionTitle.h3>{title}</SectionTitle.h3>
-      <TechStackTags techStack={techStack} />
+      <Tech_stackTags techStack={tech_stack} />
     </ContentWrapper>
   );
 }
@@ -77,32 +80,32 @@ export default function PreviousExperienceRoleSection(
 ) {
   const {
     title,
-    subTitle,
+    sub_title,
     description,
     duration,
-    projectsTitle,
+    projects_title,
     projects,
-    techStackTitle,
-    techStack,
-  } = props;
+    tech_stack_title,
+    tech_stack,
+  } = props.fields;
   return (
     <div className="flex flex-col gap-4">
       <ContainerScreen className="flex min-h-0! flex-col gap-4 px-4 pt-24">
         <SectionTitle.h2>{title}</SectionTitle.h2>
         <ContentWrapper>
           <DescriptionSection
-            title={subTitle}
+            title={sub_title}
             duration={duration}
             description={description}
           />
         </ContentWrapper>
       </ContainerScreen>
 
-      <ProjectsSection title={projectsTitle} projectsList={projects} />
+      <ProjectsSection title={projects_title} projectsList={projects} />
 
       <ContainerScreen className="flex min-h-0! flex-col gap-8 px-4 pb-24">
-        {techStack ? (
-          <TechStackSection title={techStackTitle} techStack={techStack} />
+        {tech_stack ? (
+          <Tech_stackSection title={tech_stack_title} tech_stack={tech_stack} />
         ) : (
           ""
         )}
