@@ -22,7 +22,7 @@ export default function Footer(props: FooterProps) {
   const { title, sub_title, rights, resume, resume_url, vichi } = props.fields;
   return (
     <footer className="bg-background-secondary relative w-full border-t-gray-500 py-8">
-      <div className="container m-auto grid grid-cols-4 justify-between gap-4 px-4">
+      <div className="container m-auto grid grid-cols-1 md:grid-cols-4 justify-between gap-8 md:gap-4 px-4">
         <div className="col-span-1">
           <Tooltip.Provider>
             <Tooltip.Root>
