@@ -6,8 +6,59 @@ import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "Daniel Ishigaki",
-  description: "Personal portfolio",
+  description:
+    "Personal portfolio as Full-stack developer with formation, jobs and projects.",
+  openGraph: {
+    type: "website",
+    alternateLocale: ["en", "pt"],
+    locale: "en",
+    title: "Daniel Ishigaki Portfolio",
+    description:
+      "I'm Daniel Ishigaki, a Full-stack developer with a passion for crafting innovative solutions. With a background in Graphic Design and experience in various technologies, I specialize in building scalable web applications and engaging user experiences. Explore my portfolio to see how I can bring your ideas to life.",
+    url: "danielvichi.com",
+    images: [
+      {
+        url: "https://storage.googleapis.com/assets.danielvichi.com/danielvichi-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Daniel (Vichi) Ishigaki",
+      },
+    ],
+    emails: ["danielvichi@gmail.com"],
+  },
   icons: [{ rel: "icon", url: "/favicon.ico" }],
+  twitter: {
+    creator: "@dnlvch",
+    site: "@dnlvch",
+    card: "summary_large_image",
+    title: "Daniel Ishigaki Portfolio",
+    description:
+      "I'm Daniel Ishigaki, a Full-stack developer with a passion for crafting innovative solutions. With a background in Graphic Design and experience in various technologies, I specialize in building scalable web applications and engaging user experiences. Explore my portfolio to see how I can bring your ideas to life.",
+    images: [
+      {
+        url: "https://storage.googleapis.com/assets.danielvichi.com/danielvichi-og.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Visions",
+      },
+    ],
+  },
+  keywords: [
+    "Daniel Ishigaki",
+    "Vichi",
+    "Full-stack developer",
+    "Software engineer",
+    "Front-end developer",
+    "Back-end developer",
+    "Pixel perfectionist",
+    "React.js",
+    "Next.js",
+    "Typescript",
+    "Node.js",
+    "Nest.js",
+    "Rest APIs",
+    "PostgreSQL",
+  ],
 };
 
 const robotoMono = Roboto_Mono({
