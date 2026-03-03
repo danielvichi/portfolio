@@ -40,7 +40,7 @@ function EndorseCard(props: EndorseCardProps) {
         <Markdown>{comment}</Markdown>
       </div>
 
-      <div className="w-full mt-4 flex flex-row gap-4">
+      <div className="w-full mt-4 flex flex-col md:flex-row gap-4">
         <img
           src={profilePictureUrl}
           className="h-[110px] w-[110px]"
