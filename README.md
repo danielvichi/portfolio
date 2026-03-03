@@ -1,29 +1,43 @@
-# Create T3 App
+# danievichi.com
 
-This is a [T3 Stack](https://create.t3.gg/) project bootstrapped with `create-t3-app`.
+This is a Next.js application for my personal portfolio, built with the T3 Stack. It features a 3D logo on the homepage, which can be rotated by dragging it with the mouse.
 
-## What's next? How do I make an app with this?
+## Technologies Used
 
-We try to keep this project as simple as possible, so you can start with just the scaffolding we set up for you, and add additional things later when they become necessary.
+- **Next.js**: A React framework for building server-rendered applications.
+- **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
+- **React Three Fiber**: A React renderer for Three.js, allowing for 3D graphics in React applications.
+- **Drei**: A collection of useful helpers for React Three Fiber.
+- **Tailwind CSS**: A utility-first CSS framework for styling.
+- **Google Cloud**: Used to host the project and store assets.
 
-If you are not familiar with the different technologies used in this project, please refer to the respective docs. If you still are in the wind, please join our [Discord](https://t3.gg/discord) and ask for help.
+## Features
 
-- [Next.js](https://nextjs.org)
-- [NextAuth.js](https://next-auth.js.org)
-- [Prisma](https://prisma.io)
-- [Drizzle](https://orm.drizzle.team)
-- [Tailwind CSS](https://tailwindcss.com)
-- [tRPC](https://trpc.io)
+- **3D Logo**: The homepage features a 3D logo that can be rotated by dragging it with the mouse.
+- **Responsive Design**: The layout is responsive and works well on both desktop and mobile devices.
+- **Clean Codebase**: The code is organized and follows best practices for maintainability.
+- **Open Source**: The project is open source and available under the MIT License.
+- **Deployed on Google Cloud**: The application is deployed on Google Cloud for fast and reliable hosting.
 
-## Learn More
+## Getting Started
+To run the project locally, follow these steps:
+1. Clone the repository:
+   ```bash
+   git clone
+    ```
+2. Navigate to the project directory:
+    ```bash
+    cd portfolio
+    ```
+3. Install dependencies:
+    ```bash
+    npm install
+    ```
+4. Start the development server:
+    ```bash
+    npm run dev
+    ```
+5. Open your browser and go to `http://localhost:3000` to see the application in action.
 
-To learn more about the [T3 Stack](https://create.t3.gg/), take a look at the following resources:
-
-- [Documentation](https://create.t3.gg/)
-- [Learn the T3 Stack](https://create.t3.gg/en/faq#what-learning-resources-are-currently-available) — Check out these awesome tutorials
-
-You can check out the [create-t3-app GitHub repository](https://github.com/t3-oss/create-t3-app) — your feedback and contributions are welcome!
-
-## How do I deploy this?
-
-Follow our deployment guides for [Vercel](https://create.t3.gg/en/deployment/vercel), [Netlify](https://create.t3.gg/en/deployment/netlify) and [Docker](https://create.t3.gg/en/deployment/docker) for more information.
+## License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
