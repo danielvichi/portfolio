@@ -8,7 +8,7 @@
   },
   "about": {
     "title": "Oi!",
-    "content": "Sou um desenvolvedor Full-stack mais experiente como Front-end especializado em JavaScript/TypeScript, com ampla experiência em React.js e Next.js. Construo interfaces dinâmicas e responsivas com forte foco em desempenho e experiência do usuário. Sou uma pessoa proativa, em constante aprendizado, apaixonada por transformar ideias em soluções reais. Me sinto à vontade em ambientes colaborativos e contribuo de forma consistente por meio do trabalho em equipe, senso de responsabilidade e resolução de problemas. \n\n Minha formação em design me proporciona um olhar apurado para implementação pixel-perfect e um entendimento profundo dos princípios de UI/UX. Sou especialista em traduzir visões de design em experiências digitais envolventes e acessíveis, aplicando desenvolvimento mobile-first, boas práticas de SEO e padrões de acessibilidade desde o início.\n\n Minha experiência também se estende ao back-end, onde projeto e mantenho soluções escaláveis usando Nest.js, Prisma ORM e PostgreSQL. Também tenho experiência no ecossistema Web3, com conhecimento prático em interação com smart contracts usando WAGMI e consulta de dados on-chain via Alchemy. \n\n Meu principal foco é entregar soluções tecnológicas de ponta a ponta que priorizam eficiência, inovação e uma jornada do usuário perfeita — do banco de dados à interface."
+    "content": "Sou um desenvolvedor Full-stack mais experiente como Front-end especializado em JavaScript/TypeScript, com ampla experiência em React.js e Next.js. Construo interfaces dinâmicas e responsivas com forte foco em desempenho e experiência do usuário. Sou uma pessoa proativa, em constante aprendizado, apaixonada por transformar ideias em soluções reais. Me sinto à vontade em ambientes colaborativos e contribuo de forma consistente por meio do trabalho em equipe, senso de responsabilidade e resolução de problemas. \n\n Minha formação em design me proporciona um olhar apurado para implementação pixel-perfect e um entendimento profundo dos princípios de UI/UX. Sou especialista em traduzir visões de design em experiências digitais envolventes e acessíveis, aplicando desenvolvimento mobile-first, boas práticas de SEO e padrões de acessibilidade desde o início.\n\n Minha experiência também se estende ao Back-end, onde projeto e mantenho soluções escaláveis usando Nest.js, Prisma ORM e PostgreSQL. Também tenho experiência no ecossistema Web3, com conhecimento prático em interação com smart contracts usando WAGMI e consulta de dados on-chain via Alchemy. \n\n Meu principal foco é entregar soluções tecnológicas de ponta a ponta que priorizam eficiência, inovação e uma jornada do usuário perfeita — do banco de dados à interface."
   },
   "endorser": {
     "title": "Recomendações",
@@ -106,7 +106,7 @@
         "CSP (Content Security Policy)",
         "Jest",
         "Webpack",
-        "TurboPack"
+        "TurboPack",
       ],
       "back-end": [
         "Node.js",
@@ -128,6 +128,7 @@
         "Dynamic"
       ],
       "others": [
+        "Scrum / Agile",
         "Paypal Api",
         "Stripe Api"
       ]
@@ -170,7 +171,7 @@
   "personal_project": {
     "title": "Projecto Pessoal",
     "sub_title": "Espera Queue",
-    "description": "Espera Queue (project code name) is a personal WIP project that aims practice and also showcase, test and learn more about a full-stack role, the test project is a solution to manage restaurants, bars and other types of business that needs to to manage waiting lines when it need at most, when business is running on max capacity and it needs all workforce to attend seated customers, Espera Queue automatically manages waiting lines",
+    "description": "Espera Queue (code nome do project) é um projeto pessoal em andamento que tem como objetivo praticar e também mostrar, testar e aprimorar mais sobre o papel de full-stack. O projeto de teste é uma solução para gerenciar restaurantes, bares e outros tipos de negócios que precisam gerenciar filas de espera quando necessário, quando o negócio está operando em capacidade máxima e precisa de toda a força de trabalho para atender os clientes sentados, o Espera Queue gerencia automaticamente as filas de espera.",
     "github_title": "Página dos projetos no Github",
     "tech_stack_title": "Tech Stack e Ferramentas utilizadas",
     "tech_stack": {
@@ -210,7 +211,7 @@
       {
         "institution": "UTFPR - Universidade Tecnológica Federal do Paraná campus Londrina",
         "degree": "Especialização em desenvolvimento Web",
-        "duration": "from 2012 to 2023"
+        "duration": "from 2012 to 2013"
       },
       {
         "institution": "UEL - Universidade Estadual de Londrina ",

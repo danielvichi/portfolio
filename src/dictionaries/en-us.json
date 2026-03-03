@@ -36,7 +36,7 @@
     "sub_title": "KLKTN LTDA / SanFran Tokyo",
     "duration": "from 2021 to 2024",
     "description": "KLKTN as it began was music Web3 startup that pivoted to become SanFran Tokyo, an anime and manga Web3 company. Throughout this journey, I collaborated on various projects where I applied my **UI expertise** to streamline and polish frontend implementations. While focused on full-time **Frontend development**, I frequently contributed to **Backend** tasks when needed to unblock progress and enhance team efficiency.",
-    "projects_title": "Projects Highlights",
+    "projects_title": "Highlights Projects",
     "projects": [
       {
         "title": "Weebox",
@@ -131,6 +131,7 @@
         "Dynamic"
       ],
       "others": [
+        "Scrum / Agile",
         "Paypal Api",
         "Stripe Api"
       ]
@@ -141,7 +142,7 @@
     "sub_title": "Softcenter Ltda.",
     "duration": "from 2018 to 2019",
     "description": "Softcenter is a consolidated logistics management software company with a robust and mature solution, I enter to collaborate with new fresh ideas and company re-modernization.",
-    "projects_title": "Projects Highlights",
+    "projects_title": "Highlights Projects",
     "projects": [
       {
         "title": "Software Dashboard",
@@ -173,7 +174,7 @@
   "personal_project": {
     "title": "Personal Project",
     "sub_title": "Espera Queue",
-    "description": "Espera Queue (project code name) is a personal WIP project that aims practice and also showcase, test and learn more about a full-stack role, the test project is a solution to manage restaurants, bars and other types of business that needs to to manage waiting lines when it need at most, when business is running on max capacity and it needs all workforce to attend seated customers, Espera Queue automatically manages waiting lines",
+    "description": "Espera Queue (project code name) is a personal WIP project that aims practice and also showcase, test and improve as full-stack developer, the test project is a solution to manage restaurants, bars and other types of business that needs to to manage waiting lines when it need at most, when business is running on max capacity and it needs all workforce to attend seated customers, Espera Queue automatically manages waiting lines",
     "github_title": "Github project pages",
     "tech_stack_title": "Tech Stack and tools",
     "tech_stack": {
@@ -213,7 +214,7 @@
       {
         "institution": "UTFPR - Universidade Tecnológica Federal do Paraná campus Londrina / Paraná Federal Technology University Londrina campus",
         "degree": "Web development especialization (lato sensu)",
-        "duration": "from 2012 to 2023"
+        "duration": "from 2012 to 2013"
       },
       {
         "institution": "UEL - Universidade Estadual de Londrina / Londrina State University",
