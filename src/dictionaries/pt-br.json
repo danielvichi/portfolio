@@ -106,7 +106,7 @@
         "CSP (Content Security Policy)",
         "Jest",
         "Webpack",
-        "TurboPack",
+        "TurboPack"
       ],
       "back-end": [
         "Node.js",
