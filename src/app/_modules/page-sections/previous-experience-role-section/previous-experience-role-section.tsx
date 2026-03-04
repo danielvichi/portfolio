@@ -8,6 +8,7 @@ import SectionTitle from "~/app/_components/titles";
 import ContentWrapper from "~/app/_components/content-wrapper";
 import SECTION_IDS from "~/constants/section-ids";
 import SectionWrapper from "~/app/_components/section-wrapper";
+import { StarIcon } from "@radix-ui/react-icons";
 
 interface PreviousExperienceRoleSectionFields {
   title: string;
@@ -93,7 +94,11 @@ export default function PreviousExperienceRoleSection(
   return (
     <SectionWrapper id={SECTION_IDS.EXPERIENCE} className="flex flex-col gap-4">
       <ContainerScreen className="flex min-h-0! flex-col gap-4 px-4 pt-24">
-        <SectionTitle.h2>{title}</SectionTitle.h2>
+        <SectionTitle.h2
+          customIcon={<StarIcon className="text-accent-primary h-8 w-8" />}
+        >
+          {title}
+        </SectionTitle.h2>
         <ContentWrapper>
           <DescriptionSection
             title={sub_title}

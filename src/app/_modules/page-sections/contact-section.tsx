@@ -4,6 +4,7 @@ import SectionTitle from "../../_components/titles";
 import Markdown from "react-markdown";
 import SECTION_IDS from "~/constants/section-ids";
 import SectionWrapper from "~/app/_components/section-wrapper";
+import { EnvelopeClosedIcon } from "@radix-ui/react-icons";
 
 interface ContactSectionFields {
   title: string;
@@ -20,7 +21,13 @@ export default function ContactSection(props: ContactSectionProps) {
   return (
     <SectionWrapper id={SECTION_IDS.CONTACT}>
       <ContainerScreen className="flex flex-col gap-8 px-4 py-24">
-        <SectionTitle.h2>{title}</SectionTitle.h2>
+        <SectionTitle.h2
+          customIcon={
+            <EnvelopeClosedIcon className="text-accent-primary h-8 w-8" />
+          }
+        >
+          {title}
+        </SectionTitle.h2>
 
         <ContentWrapper className="flex flex-col items-center gap-4">
           <div className="flex flex-row gap-1">

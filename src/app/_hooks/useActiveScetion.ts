@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
+import SECTION_IDS from "~/constants/section-ids";
 
 export default function useActiveSection() {
-  const [activeSection, setActiveSection] = useState<string>("home");
+  const [activeSection, setActiveSection] = useState<string>(SECTION_IDS.HERO);
 
   useEffect(() => {
     const handleScroll = () => {
