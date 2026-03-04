@@ -47,7 +47,7 @@ function SectionIcon(props: SectionIconProps) {
 
   return (
     <CurrentIcon
-      className={`transition-all duration-300 group-hover:h-5 group-hover:w-5 ${isActive ? "text-accent-primary" : "text-gray-500"} `}
+      className={`transition-all duration-300 group-hover:scale-200 ${isActive ? "text-accent-primary" : "text-gray-500"} `}
     />
   );
 }
@@ -74,9 +74,9 @@ export default function SideNavigation() {
 
   return (
     <div
-      className={`fixed top-1/2 right-1 z-50 h-auto -translate-y-1/2 bg-gray-950/50 py-2 hover:opacity-100 ${
+      className={`fixed top-1/2 right-1 z-50 h-auto -translate-y-1/2 bg-gray-950/50 py-2 hover:opacity-100 hover:scale-150 ${
         activeSection === SECTION_IDS.HERO ? "opacity-0" : "opacity-50"
-      } transition-all duration-1000`}
+      } transition-all duration-500`}
     >
       <ul className="flex flex-col">{sectionsItems}</ul>
     </div>
