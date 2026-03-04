@@ -2,9 +2,11 @@ import { useEffect, useState } from "react";
 import SECTION_IDS from "~/constants/section-ids";
 
 export default function useActiveSection() {
-  const [activeSection, setActiveSection] = useState<string>(SECTION_IDS.HERO);
+  const anchor = window.location.hash;
+  const [activeSection, setActiveSection] = useState<string>(anchor ?? SECTION_IDS.HERO);
 
-  useEffect(() => {
+
+  useEffect(function handleScrollEffect() {
     const handleScroll = () => {
       const sections = document.querySelectorAll("section");
       const scrollPosition = window.scrollY + window.innerHeight / 2;

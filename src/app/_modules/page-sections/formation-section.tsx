@@ -3,7 +3,7 @@ import ContainerScreen from "../../_components/container-screen";
 import SectionTitle from "../../_components/titles";
 import SectionWrapper from "~/app/_components/section-wrapper";
 import SECTION_IDS from "~/constants/section-ids";
-import { FileTextIcon } from "@radix-ui/react-icons";
+import FormationIcon from "~/app/_icons/formation-icon";
 
 interface Formation {
   institution: string;
@@ -31,7 +31,7 @@ export default function FormationSection({
     <SectionWrapper id={SECTION_IDS.FORMATION}>
       <ContainerScreen className="flex flex-col gap-4 px-4 py-24">
         <SectionTitle.h2
-          customIcon={<FileTextIcon className="text-accent-primary h-8 w-8" />}
+          customIcon={<FormationIcon className="fill-accent-primary h-8 w-8" />}
         >
           {title}
         </SectionTitle.h2>
