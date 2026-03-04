@@ -3,8 +3,10 @@ import ContainerScreen from "../../_components/container-screen";
 import SectionTitle from "../../_components/titles";
 import TechStackTags, { type TechStack } from "../tech-stack-tags";
 import ExternalLink from "~/app/_components/external-link";
-import { GitHubLogoIcon } from "@radix-ui/react-icons";
+import { BackpackIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import ContentWrapper from "~/app/_components/content-wrapper";
+import SECTION_IDS from "~/constants/section-ids";
+import SectionWrapper from "~/app/_components/section-wrapper";
 
 interface PersonalProjectSectionFields {
   title: string;
@@ -31,35 +33,41 @@ export default function PersonalProjectSection(
   } = props.fields;
 
   return (
-    <ContainerScreen className="flex flex-col gap-4">
-      <SectionTitle.h2>{title}</SectionTitle.h2>
-      <ContentWrapper>
-        <SectionTitle.h3>{sub_title}</SectionTitle.h3>
-        <Markdown>{description}</Markdown>
-      </ContentWrapper>
-
-      <ContentWrapper>
-        <SectionTitle.h4
-          hideIcon={false}
-          customIcon={
-            <GitHubLogoIcon className="text-accent-tertiary h-[30px] w-[30px]" />
-          }
+    <SectionWrapper id={SECTION_IDS.PERSONAL_PROJECTS}>
+      <ContainerScreen className="flex flex-col gap-4">
+        <SectionTitle.h2
+          customIcon={<BackpackIcon className="text-accent-primary h-8 w-8" />}
         >
-          {github_title}
-        </SectionTitle.h4>
-        <ExternalLink href="https://github.com/danielvichi/espera-queue-fe">
-          Front-end Github
-        </ExternalLink>
+          {title}
+        </SectionTitle.h2>
+        <ContentWrapper>
+          <SectionTitle.h3>{sub_title}</SectionTitle.h3>
+          <Markdown>{description}</Markdown>
+        </ContentWrapper>
 
-        <ExternalLink href="https://github.com/danielvichi/espera-queue-be">
-          Back-end Github
-        </ExternalLink>
-      </ContentWrapper>
+        <ContentWrapper>
+          <SectionTitle.h4
+            hideIcon={false}
+            customIcon={
+              <GitHubLogoIcon className="text-accent-tertiary h-[30px] w-[30px]" />
+            }
+          >
+            {github_title}
+          </SectionTitle.h4>
+          <ExternalLink href="https://github.com/danielvichi/espera-queue-fe">
+            Front-end Github
+          </ExternalLink>
 
-      <ContentWrapper>
-        <SectionTitle.h4>{tech_stack_title}</SectionTitle.h4>
-        <TechStackTags techStack={tech_stack} />
-      </ContentWrapper>
-    </ContainerScreen>
+          <ExternalLink href="https://github.com/danielvichi/espera-queue-be">
+            Back-end Github
+          </ExternalLink>
+        </ContentWrapper>
+
+        <ContentWrapper>
+          <SectionTitle.h4>{tech_stack_title}</SectionTitle.h4>
+          <TechStackTags techStack={tech_stack} />
+        </ContentWrapper>
+      </ContainerScreen>
+    </SectionWrapper>
   );
 }
