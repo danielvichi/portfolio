@@ -1,10 +1,11 @@
+"use client";
 import { useEffect, useState } from "react";
 import SECTION_IDS from "~/constants/section-ids";
 
 export default function useActiveSection() {
-  const anchor = window.location.hash;
-  const [activeSection, setActiveSection] = useState<string>(anchor ?? SECTION_IDS.HERO);
-
+  const [activeSection, setActiveSection] = useState<string | undefined>(
+    undefined,
+  );
 
   useEffect(function handleScrollEffect() {
     const handleScroll = () => {
@@ -23,6 +24,13 @@ export default function useActiveSection() {
         }
       });
     };
+
+    const hash = window?.location?.hash;
+    if (hash) {
+      setActiveSection(hash);
+    } else {
+      setActiveSection(SECTION_IDS.HERO);
+    }
 
     window.addEventListener("scroll", handleScroll);
     return () => {
