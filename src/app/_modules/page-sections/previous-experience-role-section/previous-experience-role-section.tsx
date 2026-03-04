@@ -6,6 +6,8 @@ import Tech_stackTags from "../../tech-stack-tags";
 import ContainerScreen from "~/app/_components/container-screen";
 import SectionTitle from "~/app/_components/titles";
 import ContentWrapper from "~/app/_components/content-wrapper";
+import SECTION_IDS from "~/constants/section-ids";
+import SectionWrapper from "~/app/_components/section-wrapper";
 
 interface PreviousExperienceRoleSectionFields {
   title: string;
@@ -89,7 +91,7 @@ export default function PreviousExperienceRoleSection(
     tech_stack,
   } = props.fields;
   return (
-    <div className="flex flex-col gap-4">
+    <SectionWrapper id={SECTION_IDS.EXPERIENCE} className="flex flex-col gap-4">
       <ContainerScreen className="flex min-h-0! flex-col gap-4 px-4 pt-24">
         <SectionTitle.h2>{title}</SectionTitle.h2>
         <ContentWrapper>
@@ -110,6 +112,6 @@ export default function PreviousExperienceRoleSection(
           ""
         )}
       </ContainerScreen>
-    </div>
+    </SectionWrapper>
   );
 }

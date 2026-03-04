@@ -1,6 +1,8 @@
 import ContentWrapper from "~/app/_components/content-wrapper";
 import ContainerScreen from "../../_components/container-screen";
 import SectionTitle from "../../_components/titles";
+import SectionWrapper from "~/app/_components/section-wrapper";
+import SECTION_IDS from "~/constants/section-ids";
 
 interface Formation {
   institution: string;
@@ -25,11 +27,13 @@ export default function FormationSection({
   ));
 
   return (
-    <ContainerScreen className="px-4 py-24 flex flex-col gap-4">
-      <SectionTitle.h2>{title}</SectionTitle.h2>
-      <ContentWrapper className="flex flex-col gap-8">
-        {formationsList}
-      </ContentWrapper>
-    </ContainerScreen>
+    <SectionWrapper id={SECTION_IDS.FORMATION}>
+      <ContainerScreen className="flex flex-col gap-4 px-4 py-24">
+        <SectionTitle.h2>{title}</SectionTitle.h2>
+        <ContentWrapper className="flex flex-col gap-8">
+          {formationsList}
+        </ContentWrapper>
+      </ContainerScreen>
+    </SectionWrapper>
   );
 }

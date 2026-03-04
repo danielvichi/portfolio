@@ -7,6 +7,8 @@ import { HeartIcon } from "@radix-ui/react-icons";
 import EndorseCard, { type EndorseCardProps } from "./recommendation-card";
 import { useModalContext } from "~/app/_contexts/modal-context";
 import Carrousel from "~/app/_components/carrousel";
+import SECTION_IDS from "~/constants/section-ids";
+import SectionWrapper from "~/app/_components/section-wrapper";
 
 interface RecommendationSectionFields {
   title: string;
@@ -67,16 +69,18 @@ export default function RecommendationSection(
   ));
 
   return (
-    <ContainerScreen className="flex flex-col gap-8 px-4 py-24">
-      <SectionTitle.h2
-        customIcon={<HeartIcon className="text-accent-primary h-8 w-8" />}
-      >
-        <Markdown>{title}</Markdown>
-      </SectionTitle.h2>
+    <SectionWrapper id={SECTION_IDS.RECOMMENDATIONS}>
+      <ContainerScreen className="flex flex-col gap-8 px-4 py-24">
+        <SectionTitle.h2
+          customIcon={<HeartIcon className="text-accent-primary h-8 w-8" />}
+        >
+          <Markdown>{title}</Markdown>
+        </SectionTitle.h2>
 
-      <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2">
-        {recommendationThumbnailList}
-      </div>
-    </ContainerScreen>
+        <div className="grid w-full grid-cols-1 gap-4 md:grid-cols-2">
+          {recommendationThumbnailList}
+        </div>
+      </ContainerScreen>
+    </SectionWrapper>
   );
 }
