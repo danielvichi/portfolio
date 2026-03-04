@@ -1,9 +1,11 @@
 "use client";
 import Markdown from "react-markdown";
-import ContainerScreen from "../../_components/container-screen";
+import ContainerScreen from "../../../_components/container-screen";
 import LogoScene from "~/app/_components/logo-3d";
 import SectionWrapper from "~/app/_components/section-wrapper";
 import SECTION_IDS from "~/constants/section-ids";
+import UsabilityHint from "./usability-hint";
+import useInteractionsStore from "~/store/useInteractionsStore";
 
 interface HeroSectionFields {
   title: string;
@@ -16,6 +18,12 @@ interface HeroSectionProps {
 
 export default function HeroSection(props: HeroSectionProps) {
   const { title, sub_title } = props.fields;
+  const { logoInteracted } = useInteractionsStore();
+
+  function logoInteractionHandler(event: React.MouseEvent<HTMLDivElement>) {
+    event.preventDefault();
+    useInteractionsStore.setState({ logoInteracted: true });
+  }
 
   return (
     <SectionWrapper id={SECTION_IDS.HERO}>
@@ -29,9 +37,19 @@ export default function HeroSection(props: HeroSectionProps) {
           </div>
         </div>
 
-        <div className="flex w-full justify-center">
-          <div className="relative h-[500px] w-full hover:cursor-move md:w-[500px] lg:w-[600px]">
+        <div className="group flex w-full justify-center">
+          <div
+            className="relative h-[500px] w-full hover:cursor-move md:w-[500px] lg:w-[600px]"
+            onClick={logoInteractionHandler}
+          >
             <LogoScene />
+            <UsabilityHint
+              className={`pointer-events-none transition-all duration-500 ${
+                logoInteracted
+                  ? "opacity-0"
+                  : "opacity-30 group-hover:opacity-100"
+              }`}
+            />
           </div>
         </div>
       </ContainerScreen>
