@@ -1,11 +1,16 @@
 import { MoveIcon } from "@radix-ui/react-icons";
 import { forwardRef } from "react";
 
+interface UsabilityHintProps extends React.HTMLAttributes<HTMLDivElement> {
+  label?: string;
+}
+
 const UsabilityHint = forwardRef<
   HTMLDivElement,
-  React.HTMLAttributes<HTMLDivElement>
+  UsabilityHintProps
 >((props, ref) => {
-  const { className, ...rest } = props;
+  const { label, className, ...rest } = props;
+
   return (
     <div
       ref={ref}
@@ -13,7 +18,7 @@ const UsabilityHint = forwardRef<
       {...rest}
     >
       <MoveIcon className="h-5 w-5" />
-      Move me around!
+      {label ?? "Click and drag to interact"}
     </div>
   );
 });

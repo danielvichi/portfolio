@@ -7,6 +7,7 @@ import { BackpackIcon, GitHubLogoIcon } from "@radix-ui/react-icons";
 import ContentWrapper from "~/app/_components/content-wrapper";
 import SECTION_IDS from "~/constants/section-ids";
 import SectionWrapper from "~/app/_components/section-wrapper";
+import { PROFILE_URLS } from "~/constants/urls";
 
 interface PersonalProjectSectionFields {
   title: string;
@@ -54,11 +55,11 @@ export default function PersonalProjectSection(
           >
             {github_title}
           </SectionTitle.h4>
-          <ExternalLink href="https://github.com/danielvichi/espera-queue-fe">
+          <ExternalLink href={`${PROFILE_URLS.github}/espera-queue-fe`}>
             Front-end Github
           </ExternalLink>
 
-          <ExternalLink href="https://github.com/danielvichi/espera-queue-be">
+          <ExternalLink href={`${PROFILE_URLS.github}/espera-queue-be`}>
             Back-end Github
           </ExternalLink>
         </ContentWrapper>
