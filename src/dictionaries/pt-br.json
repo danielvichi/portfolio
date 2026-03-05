@@ -4,7 +4,8 @@
   },
   "hero": {
     "title": "Daniel \n\n Ishigaki",
-    "sub_title": "Desenvolvedor \n\n Full-stack"
+    "sub_title": "Desenvolvedor \n\n Full-stack",
+    "drag_instruction": "Arraste para interagir"
   },
   "about": {
     "title": "Oi!",

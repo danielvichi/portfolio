@@ -6,6 +6,7 @@ import { FaceIcon } from "@radix-ui/react-icons";
 import ContentWrapper from "~/app/_components/content-wrapper";
 import SECTION_IDS from "~/constants/section-ids";
 import SectionWrapper from "~/app/_components/section-wrapper";
+import { PROFILE_URLS } from "~/constants/urls";
 
 interface AboutSectionFields {
   title: string;
@@ -32,15 +33,12 @@ export default function AboutSection(props: AboutSectionProps) {
             <Markdown>{content}</Markdown>
           </div>
           <div className="flex flex-col gap-1">
-            <ExternalLink
-              href="https://www.linkedin.com/in/daniel-ishigaki/"
-              target="_blank"
-            >
+            <ExternalLink href={PROFILE_URLS.linkedin} target="_blank">
               Linkedin
             </ExternalLink>
             <ExternalLink
               className="flex flex-row items-center gap-1.5"
-              href="https://github.com/danielvichi/"
+              href={PROFILE_URLS.github}
               target="_blank"
             >
               Github
