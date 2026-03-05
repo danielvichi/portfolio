@@ -10,6 +10,7 @@ import useInteractionsStore from "~/store/useInteractionsStore";
 interface HeroSectionFields {
   title: string;
   sub_title: string;
+  drag_instruction: string;
 }
 
 interface HeroSectionProps {
@@ -17,10 +18,12 @@ interface HeroSectionProps {
 }
 
 export default function HeroSection(props: HeroSectionProps) {
-  const { title, sub_title } = props.fields;
+  const { title, sub_title, drag_instruction } = props.fields;
   const { logoInteracted } = useInteractionsStore();
 
-  function logoInteractionHandler(event: React.MouseEvent<HTMLDivElement>) {
+  function logoInteractionHandler(
+    event: React.MouseEvent<HTMLDivElement> | React.TouchEvent<HTMLDivElement>,
+  ) {
     event.preventDefault();
     useInteractionsStore.setState({ logoInteracted: true });
   }
@@ -41,9 +44,11 @@ export default function HeroSection(props: HeroSectionProps) {
           <div
             className="relative h-[500px] w-full hover:cursor-move md:w-[500px] lg:w-[600px]"
             onClick={logoInteractionHandler}
+            onTouchStart={logoInteractionHandler}
           >
             <LogoScene />
             <UsabilityHint
+              label={drag_instruction}
               className={`pointer-events-none transition-all duration-500 ${
                 logoInteracted
                   ? "opacity-0"
