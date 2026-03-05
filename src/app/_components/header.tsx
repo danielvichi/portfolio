@@ -3,6 +3,7 @@ import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import LanguageSelector from "./language-selector";
 import * as Tooltip from "@radix-ui/react-tooltip";
 import useActiveSection from "../_hooks/useActiveScetion";
+import { PROFILE_URLS } from "~/constants/urls";
 
 interface HeaderFields {
   github_tooltip: string;
@@ -22,7 +23,7 @@ function GitHubExternalLinkWithToolTip({
       <Tooltip.Provider>
         <Tooltip.Root>
           <Tooltip.Trigger asChild>
-            <a href="https://github.com/danielvichi/portfolio" target="_blank">
+            <a href={`${PROFILE_URLS.github}/portfolio`} target="_blank">
               <GitHubLogoIcon className="text-accent-secondary h-[20px] w-[20px] transition-all group-hover:brightness-150" />
             </a>
           </Tooltip.Trigger>

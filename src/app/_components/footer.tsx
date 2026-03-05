@@ -4,6 +4,7 @@ import * as Tooltip from "@radix-ui/react-tooltip";
 import ExternalLink from "./external-link";
 import SectionTitle from "./titles";
 import Markdown from "react-markdown";
+import { PROFILE_URLS } from "~/constants/urls";
 
 interface FooterFields {
   title: string;
@@ -22,7 +23,7 @@ export default function Footer(props: FooterProps) {
   const { title, sub_title, rights, resume, resume_url, vichi } = props.fields;
   return (
     <footer className="bg-background-secondary relative w-full border-t-gray-500 py-8">
-      <div className="container m-auto grid grid-cols-1 md:grid-cols-4 justify-between gap-8 md:gap-4 px-4">
+      <div className="container m-auto grid grid-cols-1 justify-between gap-8 px-4 md:grid-cols-4 md:gap-4">
         <div className="col-span-1">
           <Tooltip.Provider>
             <Tooltip.Root>
@@ -44,12 +45,8 @@ export default function Footer(props: FooterProps) {
         </div>
         <div className="col-span-1 flex flex-col gap-2">
           <SectionTitle.h3> Links </SectionTitle.h3>
-          <ExternalLink href="https://www.github.com/danielvichi">
-            Github
-          </ExternalLink>
-          <ExternalLink href="https://www.linkedin.com/in/daniel-ishigaki">
-            Linkedin
-          </ExternalLink>
+          <ExternalLink href={PROFILE_URLS.github}>Github</ExternalLink>
+          <ExternalLink href={PROFILE_URLS.linkedin}>Linkedin</ExternalLink>
           <ExternalLink href={resume_url}>{resume}</ExternalLink>
         </div>
 
