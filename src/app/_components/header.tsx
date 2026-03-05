@@ -2,6 +2,7 @@
 import { GitHubLogoIcon } from "@radix-ui/react-icons";
 import LanguageSelector from "./language-selector";
 import * as Tooltip from "@radix-ui/react-tooltip";
+import useActiveSection from "../_hooks/useActiveScetion";
 
 interface HeaderFields {
   github_tooltip: string;
@@ -39,12 +40,34 @@ function GitHubExternalLinkWithToolTip({
   );
 }
 
+function HomeTitle() {
+  const { activeSection } = useActiveSection();
+
+  return (
+    <h1 className="text-accent-primary h-[28px] overflow-hidden">
+      <div
+        className={`flex flex-col gap-1 transition-all duration-300 ${activeSection === "hero" ? "translate-y-0" : "-translate-y-1/2"}`}
+      >
+        <div>
+          <span className="absolute -top-1 -left-[4px]">{"."}</span>
+          <span className="pl-[2px]">{">"}</span>
+        </div>
+        <a href={"#hero"} className="overflow-hidden">
+          <div>Daniel Ishigaki</div>
+        </a>
+      </div>
+    </h1>
+  );
+}
+
 export default function Header(props: HeaderProps) {
   const { github_tooltip } = props.fields;
+
   return (
     <div className="bg-background-primary fixed top-0 right-0 left-0 z-40 border-b border-gray-500 px-4">
       <div className="relative container m-auto flex flex-row items-center justify-between">
-        <h1 className="text-accent-primary"> Daniel Ishigaki</h1>
+        <HomeTitle />
+
         <div className="flex flex-row items-center gap-4">
           <GitHubExternalLinkWithToolTip tooltipString={github_tooltip ?? ""} />
           <LanguageSelector />
