@@ -6,6 +6,7 @@ export default function useActiveSection() {
   const [activeSection, setActiveSection] = useState<string | undefined>(
     undefined,
   );
+  const [isScrollActive, setIsScrollActive] = useState(false);
 
   useEffect(function handleScrollEffect() {
     const handleScroll = () => {
@@ -25,6 +26,16 @@ export default function useActiveSection() {
       });
     };
 
+    const handleScrollStart = () => {
+      setIsScrollActive(true);
+    };
+
+    const handleScrollEnd = () => {
+      setTimeout(() => {
+        setIsScrollActive(false);
+      }, 5000);
+    };
+
     const hash = window?.location?.hash;
     if (hash) {
       setActiveSection(hash);
@@ -33,10 +44,14 @@ export default function useActiveSection() {
     }
 
     window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScrollStart);
+    window.addEventListener("scrollend", handleScrollEnd);
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("scroll", handleScrollStart);
+      window.removeEventListener("scrollend", handleScrollEnd);
     };
   }, []);
 
-  return { activeSection };
+  return { activeSection, isScrollActive };
 }

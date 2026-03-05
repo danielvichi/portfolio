@@ -53,7 +53,7 @@ function SectionIcon(props: SectionIconProps) {
 }
 
 export default function SideNavigation() {
-  const { activeSection } = useActiveSection();
+  const { activeSection, isScrollActive } = useActiveSection();
 
   const sectionIds = Object.values(SECTION_IDS);
   const sectionsItems = sectionIds.map((itemId) => (
@@ -70,7 +70,7 @@ export default function SideNavigation() {
   return (
     <div
       className={`fixed top-1/2 right-1 hover:right-4 z-50 h-auto -translate-y-1/2 bg-gray-950/50 py-2 hover:scale-150 hover:opacity-100 ${
-        activeSection === SECTION_IDS.HERO ? "opacity-0" : "opacity-50"
+        activeSection === SECTION_IDS.HERO || !isScrollActive ? "opacity-0" : "opacity-50"
       } transition-all duration-500`}
     >
       <ul className="flex flex-col">{sectionsItems}</ul>
