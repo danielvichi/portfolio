@@ -30,8 +30,9 @@ export default async function HomePage({ params }: PageProps<"/[lang]">) {
           <HeroSection fields={dict.hero} />
           <AboutSection fields={dict.about} />
           <RecommendationSection fields={dict.endorser} />
-          <PreviousExperienceRoleSection fields={dict.last_exp} />
-          <PreviousExperienceRoleSection fields={dict.other_exp} />
+          <PreviousExperienceRoleSection fields={dict.klktn_exp} />
+          <PreviousExperienceRoleSection fields={dict.softcenter_exp} />
+          <PreviousExperienceRoleSection fields={dict.dvichiweb_exp} />
           <PersonalProjectSection fields={dict.personal_project} />
           <FormationSection
             title={dict.formation.title}

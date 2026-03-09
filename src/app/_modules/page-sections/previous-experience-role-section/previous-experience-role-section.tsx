@@ -15,9 +15,9 @@ interface PreviousExperienceRoleSectionFields {
   sub_title: string;
   duration: string;
   description: string;
-  projects_title: string;
-  projects: ProjectCardProps[];
-  tech_stack_title: string;
+  projects_title?: string;
+  projects?: ProjectCardProps[];
+  tech_stack_title?: string;
   tech_stack?: TechStack;
 }
 interface PreviousExperienceRoleSectionProps {
@@ -108,7 +108,9 @@ export default function PreviousExperienceRoleSection(
         </ContentWrapper>
       </ContainerScreen>
 
-      <ProjectsSection title={projects_title} projectsList={projects} />
+      {projects && projects.length > 0 && (
+        <ProjectsSection title={projects_title} projectsList={projects} />
+      )}
 
       <ContainerScreen className="flex min-h-0! flex-col gap-8 px-4 pb-24">
         {tech_stack ? (

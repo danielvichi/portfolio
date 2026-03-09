@@ -71,11 +71,7 @@ export default function HeroSection(props: HeroSectionProps) {
             onClick={logoInteractionHandler}
             onTouchStart={logoInteractionHandler}
           >
-            <LogoScene
-              onLoadComplete={() => {
-                console.log("LOADED!!!");
-              }}
-            />
+            <LogoScene />
 
             <AnimatedDiv style={usabilityHintSpring}>
               <UsabilityHint
