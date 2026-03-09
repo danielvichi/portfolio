@@ -1,7 +1,15 @@
 import type * as THREE from "three";
 import { Canvas } from "@react-three/fiber";
 import { Suspense } from "react";
-import { OrbitControls, useGLTF, Environment } from "@react-three/drei";
+import {
+  OrbitControls,
+  useGLTF,
+  Environment,
+  useProgress,
+} from "@react-three/drei";
+import { animated, useSpring } from "@react-spring/web";
+
+const AnimatedCanvas = animated(Canvas);
 
 interface ModelProps {
   url: string;
@@ -28,11 +36,31 @@ function Model({
   );
 }
 
-export default function LogoScene() {
+interface LogoSceneProps {
+  onLoadComplete?: () => void;
+}
+
+export default function LogoScene(props: LogoSceneProps) {
+  const { onLoadComplete } = props;
+
+  const { progress } = useProgress();
+
+  const canvasSpring = useSpring({
+    from: { opacity: 0 },
+    to: { opacity: progress === 100 ? 1 : 0 },
+    delay: 500,
+    config: { duration: 1000 },
+    onRest: () => {
+      if (progress === 100 && onLoadComplete) {
+        onLoadComplete();
+      }
+    },
+  });
+
   return (
-    <Canvas
+    <AnimatedCanvas
       camera={{ position: [-1, -3, 5], fov: 50 }}
-      style={{ width: "100%", height: "100%" }}
+      style={{ width: "100%", height: "100%", ...canvasSpring }}
     >
       {/* Ambient light for basic illumination */}
       <ambientLight intensity={0.5} />
@@ -41,13 +69,13 @@ export default function LogoScene() {
       <directionalLight position={[0, 0, 5]} intensity={1} />
 
       {/* Suspense for loading fallback */}
+      {/* Load your GLB model */}
       <Suspense fallback={null}>
-        {/* Load your GLB model */}
         <Model url="/logo.glb" scale={5} position={[0, 0, 0]} />
-
-        {/* Environment lighting for realistic reflections */}
-        <Environment preset="city" />
       </Suspense>
+
+      {/* Environment lighting for realistic reflections */}
+      <Environment preset="city" />
 
       {/* Controls to orbit around the model */}
       <OrbitControls
@@ -61,6 +89,6 @@ export default function LogoScene() {
       {/* Optional grid and axes helpers */}
       {/* <gridHelper args={[10, 10]} /> */}
       {/* <axesHelper args={[5]} /> */}
-    </Canvas>
+    </AnimatedCanvas>
   );
 }

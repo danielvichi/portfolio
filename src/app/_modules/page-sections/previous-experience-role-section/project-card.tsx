@@ -55,6 +55,7 @@ export default function ProjectCard(props: ProjectCardProps) {
     <img
       key={index}
       src={imgUrl}
+      className="relative"
       alt={`${title} project sample image ${index + 1}`}
     />
   ));
