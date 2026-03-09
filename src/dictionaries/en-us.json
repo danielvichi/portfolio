@@ -32,7 +32,7 @@
       }
     ]
   },
-  "last_exp": {
+  "klktn_exp": {
     "title": "Last Experience",
     "sub_title": "KLKTN LTDA / SanFran Tokyo",
     "duration": "from 2021 to 2024",
@@ -138,7 +138,7 @@
       ]
     }
   },
-  "other_exp": {
+  "softcenter_exp": {
     "title": "Previous Experience",
     "sub_title": "Softcenter Ltda.",
     "duration": "from 2018 to 2019",
@@ -169,6 +169,30 @@
       "others": [
         "Adobe creative suite",
         "Google Analytics"
+      ]
+    }
+  },
+  "dvichiweb_exp": {
+    "title": "Other Experiences",
+    "sub_title": "D.vichi web.",
+    "duration": "from 2016 to 2018",
+    "description": "Multiple projects as freelancer and personal projects, with a focus on web development and design. I built websites for small businesses, created custom WordPress themes, and developed bussiness Landing Pages. This period was crucial for honing my skills in web development, as well as gaining experience in client communication and project management.",
+    "tech_stack_title": "Tech Stack and tools",
+    "tech_stack": {
+      "front-end": [
+        "Javascript",
+        "LESS",
+        "jQuery",
+        "HTML5/CSS3",
+        "Modernizr",
+        "Bootstrap"
+      ],
+      "others": [
+        "WordPress",
+        "Google Analytics",
+        "SEO best practices",
+        "Wireframe",
+        "Loja Integrada (e-commerce platform)"
       ]
     }
   },
