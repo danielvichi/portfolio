@@ -1,10 +1,13 @@
 import { Cross1Icon } from "@radix-ui/react-icons";
+import { animated, config, useSpring } from "@react-spring/web";
 import {
   useEffect,
   type Dispatch,
   type ReactElement,
   type SetStateAction,
 } from "react";
+
+const AnimatedDiv = animated("div");
 
 type CloseButtonProps = React.ButtonHTMLAttributes<HTMLButtonElement>;
 
@@ -41,6 +44,15 @@ export default function Modal(props: ModalProps) {
     setIsOpen(false);
   }
 
+  const contentSpring = useSpring({
+    from: { opacity: 0, transform: "translateY(50px)" },
+    to: {
+      opacity: isOpen ? 1 : 0,
+      transform: isOpen ? "translateY(0)" : "translateY(50px)",
+    },
+    config: config.default,
+  });
+
   useEffect(
     function preventBodyScrollOnIsOpen() {
       if (isOpen) {
@@ -65,9 +77,12 @@ export default function Modal(props: ModalProps) {
         className={`absolute inset-0 bg-black opacity-70`}
         onClick={handleClickClose}
       />
-      <div className="relative min-w-[300px] max-w-[1024px] m-4 md:mx-16">
+      <div className="relative m-4 max-w-[1024px] min-w-[300px] md:mx-16">
         <CloseButton onClick={handleClickClose} />
-        {isOpen ? children : <></>}
+
+        <AnimatedDiv style={contentSpring}>
+          {isOpen ? children : <></>}
+        </AnimatedDiv>
       </div>
     </div>
   );
