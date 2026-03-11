@@ -11,7 +11,7 @@ export interface TechStack {
 
 function TagListSection({ title, tags }: { title: string; tags: string[] }) {
   const tagList = tags.map((tag) => (
-    <Tag key={tag} size="sm">
+    <Tag key={tag} size="md">
       {tag}
     </Tag>
   ));
