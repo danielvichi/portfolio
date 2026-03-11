@@ -108,12 +108,12 @@ export default function PreviousExperienceRoleSection(
         </ContentWrapper>
       </ContainerScreen>
 
-      {projects && projects.length > 0 && (
+      {projects_title && projects && projects.length > 0 && (
         <ProjectsSection title={projects_title} projectsList={projects} />
       )}
 
       <ContainerScreen className="flex min-h-0! flex-col gap-8 px-4 pb-24">
-        {tech_stack ? (
+        {tech_stack_title && tech_stack ? (
           <Tech_stackSection title={tech_stack_title} tech_stack={tech_stack} />
         ) : (
           ""
