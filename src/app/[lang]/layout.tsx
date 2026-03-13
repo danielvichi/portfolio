@@ -40,7 +40,7 @@ export const metadata: Metadata = {
         url: "https://storage.googleapis.com/assets.danielvichi.com/danielvichi-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Visions",
+        alt: "Daniel (Vichi) Ishigaki",
       },
     ],
   },
@@ -74,8 +74,7 @@ const mailerLite = `
     (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
     ml('account', '2143455');`;
 
-    // const GTM_ID = process.env._NEXT_GTM_ID!;
-    const GTM_ID = "GTM-PH3MDZM7";
+const GTM_ID = process.env.NEXT_GTM_ID!;
 
 export async function generateStaticParams() {
   return [{ lang: "en" }, { lang: "pt" }];
