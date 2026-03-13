@@ -83,11 +83,8 @@ export async function generateStaticParams() {
 export default async function RootLayout({
   children,
   params,
-}: {
-  children: React.ReactNode;
-  params: { lang: string };
-}) {
-  const { lang } = params;
+}: LayoutProps<"/[lang]">) {
+  const { lang } = await params;
   return (
     <html lang={lang} className={`${robotoMono.variable}`}>
       {process.env.NODE_ENV === "production" ? (
