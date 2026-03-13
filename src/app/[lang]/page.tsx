@@ -13,6 +13,10 @@ import ModalProvider from "../_contexts/modal-context";
 import PreviousExperienceRoleSection from "../_modules/page-sections/previous-experience-role-section/previous-experience-role-section";
 import SideNavigation from "../_components/side-navigation";
 
+export async function generateStaticParams() {
+  return [{ lang: 'pt' }, { lang: 'en' }];
+}
+
 export default async function HomePage({ params }: PageProps<"/[lang]">) {
   const { lang } = await params;
 
