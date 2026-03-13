@@ -74,7 +74,8 @@ const mailerLite = `
     (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
     ml('account', '2143455');`;
 
-const GTM_ID = process.env._NEXT_GTM_ID!;
+    // const GTM_ID = process.env._NEXT_GTM_ID!;
+    const GTM_ID = "GTM-PH3MDZM7";
 
 export async function generateStaticParams() {
   return [{ lang: "en" }, { lang: "pt" }];
