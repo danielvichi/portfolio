@@ -35,7 +35,7 @@ steps:
         "us-west1",
         "--port=3000",
         "--allow-unauthenticated",
-        "--set-secrets=NEXT_GTM_ID=GTM-PH3MDZM7",
+        "--update-env-vars=NEXT_GTM_ID=GTM-PH3MDZM7",
       ]
 timeout: 900s
 
