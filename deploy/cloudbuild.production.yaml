@@ -11,7 +11,7 @@ steps:
         "-t",
         "us-west1-docker.pkg.dev/danielvichi/danielvichi-production/portfolio:latest",
         "--build-arg=BUILD_PROD=1",
-        "--build-arg=GTM_ID=G-CV0BZGEK0K",
+        "--build-arg=GA_ID=G-CV0BZGEK0K",
         ".",
       ]
   # Push the container image to Container Registry

@@ -36,8 +36,8 @@ COPY --from=dependencies /app/node_modules ./node_modules
 
 # Copy application source code
 COPY . .
-ARG GTM_ID
-ENV GTM_ID $GTM_ID
+ARG GA_ID
+ENV GA_ID $GA_ID
 ENV NODE_ENV=production
 
 # Next.js collects completely anonymous telemetry data about general usage.

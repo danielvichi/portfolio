@@ -3,7 +3,7 @@ import "~/styles/globals.css";
 import { type Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
 import Script from "next/script";
-import { GoogleTagManager } from "@next/third-parties/google";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
   title: "Daniel Ishigaki",
@@ -74,7 +74,7 @@ const mailerLite = `
     (window,document,'script','https://assets.mailerlite.com/js/universal.js','ml');
     ml('account', '2143455');`;
 
-const GTM_ID = process.env.GTM_ID!;
+const GA_ID = process.env.GA_ID!;
 
 export async function generateStaticParams() {
   return [{ lang: "en" }, { lang: "pt" }];
@@ -88,7 +88,7 @@ export default async function RootLayout({
   return (
     <html lang={lang} className={`${robotoMono.variable}`}>
       {process.env.NODE_ENV === "production" ? (
-        <GoogleTagManager gtmId={GTM_ID} />
+        <GoogleAnalytics gaId={GA_ID} />
       ) : null}
       <Script id="mailer-lite">{mailerLite}</Script>
       <body>{children}</body>
