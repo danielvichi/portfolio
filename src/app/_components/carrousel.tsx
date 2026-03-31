@@ -45,7 +45,7 @@ function NavigationButton(props: NavigationButton) {
         }`}
       />
       <ChevronRight
-        className={`fill-background-primary stroke-2 stroke-accent-tertiary relative h-[30px] w-[30px] transition-opacity group-hover:scale-110 group-hover:opacity-100 group-active:scale-95 group-disabled:scale-100 ${type === "previous" ? "rotate-180" : ""}`}
+        className={`fill-background-primary stroke-4 stroke-accent-tertiary relative h-[30px] w-[30px] transition-opacity group-hover:scale-110 group-hover:opacity-100 group-active:scale-95 group-disabled:scale-100 ${type === "previous" ? "rotate-180" : ""}`}
       />
     </button>
   );
